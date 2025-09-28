@@ -24,7 +24,7 @@ export const products = [
         ],
         // iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
         // link: "/ui.earth.com",
-        category:"زيت"
+        category:"oil"
     },
     {
         id: 2,
@@ -47,7 +47,7 @@ export const products = [
         // iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
         // link: "/ui.earth.com",
         mwas:[],
-        category:"زيت"
+        category:"oil"
     },
     {
         id: 4,
@@ -57,7 +57,7 @@ export const products = [
         // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
         // link: "/ui.yoom.com",
         mwas:[],
-        category:"زيت"
+        category:"oil"
 
 
     }

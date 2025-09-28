@@ -15,9 +15,26 @@ function App() {
 
     return (
       <div className="w-full overflow-hidden">
+<<<<<<< Updated upstream
           <Header/>
           <ProductSection/>
           <About/>
+=======
+
+          <Router>
+              <Header/>
+              <ProductSection/>
+
+              <Routes>
+
+
+                  <Route path="/product/:id" element={<ProductDetail/>} />
+              </Routes>
+          </Router>
+          <About/>
+
+
+>>>>>>> Stashed changes
 
       </div>
         // <Router>

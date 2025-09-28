@@ -1,30 +1,62 @@
-import React from 'react'
+import React from "react";
 import Navbar from "./Navbar.jsx";
-import MenuIcon from '@mui/icons-material/Menu';
 
 const Header = () => {
     return (
-    <div className="relative min-h-screen mb-4 bg-cover bg-center flex
-    items-center w-full overflow-hidden"
-         style={{backgroundImage: "url('background/tank-700.jpg')",
-    }} id='Header'>
-     <div className=" absolute inset-0 z-1 bg-black/50 "></div>
-        <Navbar/>
-        <div className="container inset-0 z-2 text-center mx-auto py-6 px-6
-        md-px-20 lg-px-32 text-primary  ">
+        <div
+            className="relative min-h-screen mb-4 bg-cover bg-center flex flex-col items-center justify-center w-full overflow-hidden"
+            style={{ backgroundImage: "url('background/tank-700.jpg')" }}
+            id="Header"
+        >
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/50"></div>
 
+            {/* Navbar */}
+            <Navbar />
 
-            <h2 className="text-5xl sm:text-6xl md:text-[82px] inline-block
-              max-w-3xl font-semibold pt-50 pb-6 opacity-0 animate-fade-in-delay-1" > زيت ئیكسترا بی وان</h2>
-            <p className="text-lg md:text-2xl opacity-0 animate-fade-in-delay-2 ">مصمم لأقصى أداء لمحركك</p>
-            <div className="flex flex-row gap-4 justify-center items-center mt-16  ">
+            {/* Content */}
+            <div className="relative z-10 container mx-auto flex flex-col items-center justify-center text-center gap-12 py-16">
+                {/* Top Text */}
+                <div className="flex flex-col items-center justify-center text-primary mt-40">
+                    <h2 className="text-6xl sm:text-6xl md:text-[82px] font-semibold max-w-3xl opacity-0 animate-fade-in-delay-1 tracking-wider">
+                        Extra B1 Oil
+                    </h2>
+                    <p className="text-lg md:text-2xl mt-6 opacity-0 animate-fade-in-delay-2">
+                        Design for best engine your car
+                    </p>
+                    <div className="flex flex-row gap-4 mt-10">
+                        <button className="px-6 py-3 bg-button text-white rounded-lg shadow-lg hover:bg-button/80 transition">
+                            <a href="#Products">Products</a>
+                        </button>
+                    </div>
+                </div>
 
-                <a href="#Products" className="border hover:text-button border-button transition duration-400  px-8 py-3 max-sm:text-sm max-sm:px-4 max-sm:py-3 rounded opacity-0 animate-fade-in-delay-3">منتجاتنا</a>
-                <a href="#Contact" className=" bg-button text-primary hover:bg-primary hover:text-button   transition duration-400 px-8 py-3 rounded max-sm:text-sm max-sm:px-4 max-sm:py-3 opacity-0 animate-fade-in-delay-3">تواصل معنا</a>
+                {/* Product Images */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                    <img
+                        src="/products/daba-shin.png"
+                        alt="Product 1"
+                        className="rounded-xl w-40 shadow-lg object-contain bg-gray-700/20 p-4"
+                    />
+                    <img
+                        src="/products/daba-zard.png"
+                        alt="Product 2"
+                        className="rounded-xl w-40 shadow-lg object-contain bg-gray-700/20 p-4"
+                    />
+                    <img
+                        src="/products/zait-faraml.png"
+                        alt="Product 3"
+                        className="rounded-xl w-40 shadow-lg object-contain bg-gray-700/20 p-6"
+                    />
+                    <img
+                        src="/products/tank-40.png"
+                        alt="Product 4"
+                        className="rounded-xl w-40 shadow-lg object-contain bg-gray-700/20 p-4"
+                    />
+                </div>
             </div>
         </div>
-    </div>
-    )
+    );
+};
 
-}
-export default Header
+export default Header;
