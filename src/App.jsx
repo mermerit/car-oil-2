@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductDetail from "../components/ProductDetail.jsx";
 import Navbar from "../components/Navbar.jsx";
 import About from "../components/About.jsx";
-import {ProductSection} from "../components/ProductSection.jsx";
+import ProductSection from "../components/ProductSection.jsx";
+import Contact from "../components/Contact.jsx";
 
 
 
@@ -15,26 +16,16 @@ function App() {
 
     return (
       <div className="w-full overflow-hidden">
-<<<<<<< Updated upstream
           <Header/>
           <ProductSection/>
           <About/>
-=======
+          <Contact/>
 
           <Router>
-              <Header/>
-              <ProductSection/>
-
               <Routes>
-
-
                   <Route path="/product/:id" element={<ProductDetail/>} />
               </Routes>
           </Router>
-          <About/>
-
-
->>>>>>> Stashed changes
 
       </div>
         // <Router>

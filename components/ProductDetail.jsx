@@ -1,96 +1,131 @@
-<<<<<<< Updated upstream
-import { useParams, Link } from "react-router-dom";
-import {products} from "../data/index.jsx";
-
-
-function ProductDetail() {
-    const { id } = useParams();
-    const product = products.find((p) => p.id === parseInt(id));
-
-    if (!product) return <p>Product not found.</p>;
-
-    return (
-        <div className="p-4">
-            <h1 className="text-2xl font-bold">{product.name}</h1>
-
-            <p className="mt-2">{product.description}</p>
-            <Link to="/" className="text-blue-500 mt-4 inline-block">Back to Products</Link>
-=======
-import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import { CheckCircleIcon, X, Star } from "lucide-react";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ProductDetail({ product, onClose }) {
-    if (!product)
-        return <p className="text-center text-red-500">❌ المنتج غير موجود</p>;
+    if (!product) return null;
 
     const phoneNumber = "9647501159786";
 
     const sendViaWhatsApp = () => {
         const message = `مرحباً 👋\nأرغب في معرفة المزيد عن المنتج:\n\n📌 الاسم: ${product.title}\n📝 الوصف: ${product.des}`;
-        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+            message
+        )}`;
         window.open(url, "_blank");
     };
 
+    // التقييم (افتراضي 5 إذا ما موجود)
+    const rating = product.rating || 5;
+
     return (
-        <div className="fixed inset-0 bg-black/70 z-50 flex justify-center items-center p-4">
-            {/* Overlay */}
-            <div className="absolute inset-0" onClick={onClose}></div>
-
-            {/* Modal Card */}
-            <div
-                className="relative bg-white rounded-2xl shadow-2xl w-5/6 max-w-5xl overflow-y-auto max-h-[90vh]"
-                onClick={(e) => e.stopPropagation()}
-            >
-                <div className="flex flex-col md:flex-row ">
-                    {/* Product Image */}
-                    <div className="  flex flex-col justify-center items-center p-2">
-                        <img
-                            src={product.img}
-                            alt={product.title}
-                            className="max-h-[250px] w-auto object-contain rounded-lg "
-                        />
-                    </div>
-
-
-                    {/* Product Info */}
-                    <div className="md:w-1/2 p-8 flex bg-button flex-col">
-                        <h1 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">
-                            {product.title}
-                        </h1>
-                        <p className="text-gray-100 mb-6 leading-relaxed">{product.des}</p>
-
-                        {product.mwas && (
-                            <div className="mb-6">
-                                <h2 className="text-xl font-semibold mb-3 text-gray-800">
-                                    المميزات:
-                                </h2>
-                                <ul className="space-y-3">
-                                    {product.mwas.map((feature, idx) => (
-                                        <li
-                                            key={idx}
-                                            className="flex items-center text-[12px] sm:text-[14px] lg:text-[16px] gap-2 text-gray-700"
-                                        >
-                                            <CheckCircleIcon className="h-5 w-5 text-green-500" />
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-                {/* ✅ WhatsApp Floating Button */}
-                <button
-                    onClick={sendViaWhatsApp}
-                    className="fixed bottom-30 right-10 sm:bottom-50 sm:right-12 md:bottom-32  md:right-15 lg:bottom-50 lg:right-30  flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition transform hover:scale-110"
+        <AnimatePresence>
+            {product && (
+                <motion.div
+                    className="fixed inset-0 bg-black/70 z-50 flex justify-center items-center p-2 sm:p-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                 >
-                    <WhatsAppIcon style={{ fontSize: "28px" }} />
-                </button>
-            </div>
->>>>>>> Stashed changes
-        </div>
+                    {/* Overlay */}
+                    <div className="absolute inset-0" onClick={onClose}></div>
+
+                    {/* Modal Card */}
+                    <motion.div
+                        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-4xl overflow-hidden flex flex-col"
+                        initial={{ scale: 0.9, opacity: 0, y: 30 }}
+                        animate={{ scale: 1, opacity: 1, y: 0 }}
+                        exit={{ scale: 0.9, opacity: 0, y: 30 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Header */}
+                        <div className="flex justify-between items-center p-3 sm:p-4 border-b border-gray-200">
+                            <h2 className="text-lg sm:text-2xl font-bold text-gray-800">
+                                {product.title}
+                            </h2>
+                            <button
+                                onClick={onClose}
+                                className="text-gray-500 hover:text-red-500 transition"
+                            >
+                                <X className="w-6 h-6" />
+                            </button>
+                        </div>
+
+                        {/* Body */}
+                        <div className="flex flex-col md:flex-row">
+                            {/* Product Image */}
+                            <div className="flex-1 flex justify-center items-center bg-gray-100 p-4">
+                                <img
+                                    src={product.img}
+                                    alt={product.title}
+                                    className="max-h-[200px] sm:max-h-[250px] md:max-h-[300px] w-auto object-contain rounded-lg shadow-md"
+                                />
+                            </div>
+
+                            {/* Product Info */}
+                            <div className="flex-1 p-4 sm:p-6 flex flex-col justify-between bg-gradient-to-br from-gray-600 to-gray-500 text-white">
+                                <div>
+                                    <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                                        الوصف
+                                    </h3>
+                                    <p className="mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
+                                        {product.des}
+                                    </p>
+
+                                    {/* ✅ التقييم بالنجوم */}
+                                    <div className="flex items-center mb-4 sm:mb-6">
+                                        {[...Array(5)].map((_, i) => (
+                                            <Star
+                                                key={i}
+                                                className={`w-5 h-5 sm:w-6 sm:h-6 ${
+                                                    i < rating
+                                                        ? "text-yellow-400 fill-yellow-400"
+                                                        : "text-gray-400"
+                                                }`}
+                                            />
+                                        ))}
+                                        <span className="ml-2 sm:ml-3 text-xs sm:text-sm">
+                      {rating} / 5
+                    </span>
+                                    </div>
+
+                                    {product.mwas && (
+                                        <div>
+                                            <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                                                المميزات:
+                                            </h3>
+                                            <ul className="space-y-2 sm:space-y-3">
+                                                {product.mwas.map((feature, idx) => (
+                                                    <li
+                                                        key={idx}
+                                                        className="flex items-center text-xs sm:text-sm gap-2"
+                                                    >
+                                                        <CheckCircleIcon className="h-4 w-4 sm:h-5 sm:w-5 text-green-400" />
+                                                        {feature}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* WhatsApp Button */}
+                                <div className="mt-4 sm:mt-6 text-center">
+                                    <button
+                                        onClick={sendViaWhatsApp}
+                                        className="inline-flex items-center justify-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-green-500 hover:bg-green-600 rounded-full shadow-md transition transform hover:scale-105 text-xs sm:text-sm"
+                                    >
+                                        <WhatsAppIcon style={{ fontSize: "16px" }} />
+                                        <span className="font-medium">Contact via WhatsApp</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </motion.div>
+                </motion.div>
+            )}
+        </AnimatePresence>
     );
 }
-
-export default ProductDetail;

@@ -1,56 +1,86 @@
-import React from 'react'
-import Header from "./Header.jsx";
+import React from "react";
+import StarIcon from "@mui/icons-material/Star";
+import PeopleIcon from "@mui/icons-material/People";
+import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
+const stats = [
+    { value: "10+", label: "Years of Excellence", icon: <StarIcon /> },
+    { value: "50K+", label: "Happy Customers", icon: <PeopleIcon /> },
+    { value: "100%", label: "Premium Quality", icon: <WorkspacePremiumIcon /> },
+    { value: "24/7", label: "Customer Support", icon: <SupportAgentIcon /> },
+];
 const About = () => {
     return (
-        <div className="  flex flex-col items-center justify-center
-        mx-auto p-14 md:px-20 lg:px-32 w-full overflow-hidden " id="About"
-        style={{backgroundImage: "url('background/tank-400.jpg')",}}>
+        <section
+            id="About"
+            className="relative bg-gray-100 flex flex-col items-center justify-center text-white py-24 px-6 md:px-16 lg:px-32 w-full"
 
-            <h1 className=" text-2xl sm:text-4xl    font-bold mb-4">عن
-                  <span className="underline underline-offset-12 text-background decoration-1.2 under font-light "> ئيكسترا بي وان</span>
-            </h1>
+        >
+            {/* Overlay */}
+            <div className="absolute inset-0 "></div>
 
-                <p className=" max-w-80     text-center  ">
-                    نحن متخصصون في توفير زيوت سيارات عالية
-                    الجودة تحافظ على محركك وتمنحه أداءً أفضل
-                </p>
-
-
-
-            <div className="flex z-10 flex-col lg:flex-row items-center lg:items-start lg:gap-20">
-
-                    <img src="../public/background/zait-taza.png" alt="" className="w-full  lg:w-1/2 max-w-lg     "/>
-
-
-                <div className="flex flex-col items-center md:items-start mt-10 ">
-                    <div className="grid grid-cols-2 gap-6 md:gap-10 w-full 2xl:pr-28 ">
-                        <div>
-                            <p className="text-4xl font-medium text-button ">10+</p>
-                            <p className="text-foreground">Years of Excellence</p>
-                        </div>
-                        <div>
-                            <p className="text-4xl font-medium text-button  ">10+</p>
-                            <p className="text-foreground">Years of Excellence</p>
-                        </div>
-                        <div>
-                            <p className="text-4xl font-medium  text-button ">10+</p>
-                            <p className="text-foreground">Years of Excellence</p>
-                        </div>
-                        <div>
-                            <p className="text-4xl font-medium text-button">10+</p>
-                            <p className="text-foreground">Years of Excellence</p>
-                        </div>
-                    </div>
-                    <p className="my-10 max-w-lg text-center">
-                        نحن في موقعنا نضع ثقة عملائنا في المقام الأول، ونسعى دائمًا لتقديم أفضل أنواع زيوت السيارات التي تواكب أحدث المواصفات العالمية. ندرك أن زيت المحرك هو العنصر الأساسي في حماية السيارة وضمان كفاءتها، لذلك اخترنا بعناية منتجات عالية الجودة تمنح محركك قوة، حماية، وأداء يدوم لفترة أطول
+            {/* Content */}
+            <div className="relative z-10 max-w-7xl w-full">
+                {/* Title */}
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl sm:text-5xl text-black font-bold mb-4">
+                        About <span className="text-button">Extra B1</span>
+                    </h2>
+                    <div className="w-20 h-1 bg-button mx-auto rounded-full mb-6"></div>
+                    <p className="max-w-2xl mx-auto text-lg text-gray-400 leading-relaxed">
+                        We specialize in providing high-quality car oils that protect your engine
+                        and deliver outstanding performance for every drive.
                     </p>
-
                 </div>
 
+                {/* Layout */}
+                <div className="flex flex-col lg:flex-row items-center gap-16">
+                    {/* Image */}
+                    <div className="flex-1 flex justify-center">
+                        <img
+                            src="/background/zait-taza.png"
+                            alt="Oil Bottle"
+                            className="w-full max-w-md  "
+                        />
+                    </div>
+
+                    {/* Text + Stats */}
+                    <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
+                        {/* Stats Grid */}
+                        <div className="grid grid-cols-2 gap-8 w-full mb-12">
+                            {stats.map((stat, i) => (
+                                <div
+                                    key={i}
+                                    className="flex flex-col items-center lg:items-start bg-gray-800 hover:bg-gray-700 transition p-6 rounded-xl shadow-md border border-gray-700"
+                                >
+                                    <div className="text-button text-3xl mb-3">{stat.icon}</div>
+                                    <p className="text-3xl font-bold text-white">{stat.value}</p>
+                                    <p className="text-gray-400 text-sm">{stat.label}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Paragraph */}
+                        <p className="text-gray-400 leading-relaxed mb-10 max-w-xl">
+                            At Extra B1, we prioritize our customers’ trust. Our mission is to
+                            provide premium engine oils that meet global standards. Each of our
+                            products is carefully crafted to ensure maximum protection, power, and
+                            durability for your vehicle.
+                        </p>
+                        {/* CTA Button */}
+                        <a
+                            href="#Contact"
+                            className="px-10 py-4 bg-button text-white font-semibold rounded-lg shadow-lg
+                            hover:bg-button/90 hover:shadow-button/40 hover:scale-105 transform transition mb-10"
+                        >
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
             </div>
-            <button  className="bg-button  text-white px-8 py-4 rounded"><a href="#Header">تواصل معنا</a></button>
-        </div>
-    )
-}
-export default About
+        </section>
+    );
+};
+
+export default About;

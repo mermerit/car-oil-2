@@ -13,14 +13,15 @@ const Header = () => {
 
             {/* Navbar */}
             <Navbar />
+            {/*<Navbar />*/}
 
             {/* Content */}
             <div className="relative z-10 container mx-auto flex flex-col items-center justify-center text-center gap-12 py-16">
                 {/* Top Text */}
                 <div className="flex flex-col items-center justify-center text-primary mt-40">
-                    <h2 className="text-6xl sm:text-6xl md:text-[82px] font-semibold max-w-3xl opacity-0 animate-fade-in-delay-1 tracking-wider">
+                    <h1 className="text-6xl sm:text-6xl md:text-[82px] font-semibold max-w-3xl opacity-0 animate-fade-in-delay-1 tracking-wider">
                         Extra B1 Oil
-                    </h2>
+                    </h1>
                     <p className="text-lg md:text-2xl mt-6 opacity-0 animate-fade-in-delay-2">
                         Design for best engine your car
                     </p>
@@ -36,22 +37,22 @@ const Header = () => {
                     <img
                         src="/products/daba-shin.png"
                         alt="Product 1"
-                        className="rounded-xl w-40 shadow-lg object-contain bg-gray-700/20 p-4"
+                        className="rounded-xl w-45 shadow-lg object-contain  p-4"
                     />
                     <img
                         src="/products/daba-zard.png"
                         alt="Product 2"
-                        className="rounded-xl w-40 shadow-lg object-contain bg-gray-700/20 p-4"
+                        className="rounded-xl w-45 shadow-lg object-contain p-4"
                     />
                     <img
                         src="/products/zait-faraml.png"
                         alt="Product 3"
-                        className="rounded-xl w-40 shadow-lg object-contain bg-gray-700/20 p-6"
+                        className="rounded-xl w-45 shadow-lg object-contain  p-6"
                     />
                     <img
                         src="/products/tank-40.png"
                         alt="Product 4"
-                        className="rounded-xl w-40 shadow-lg object-contain bg-gray-700/20 p-4"
+                        className="rounded-xl w-45 shadow-lg object-contain  p-4"
                     />
                 </div>
             </div>

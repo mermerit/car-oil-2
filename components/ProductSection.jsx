@@ -1,126 +1,121 @@
-<<<<<<< Updated upstream
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
-import {useState} from "react";
-import {cn} from "../src/lib/utils.js";
-import {products} from "../data/index.jsx";
-=======
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { cn } from "../src/lib/utils.js";
 import { products } from "../data/index.jsx";
-import ProductDetail from "./ProductDetail.jsx"; // import modal
->>>>>>> Stashed changes
+import ProductDetail from "./ProductDetail.jsx";
+import { Car, Droplet, Ban } from "lucide-react";
 
-const categories = ["all","oil","stop oil"];
 
 export const ProductSection = () => {
     const [activeCategory, setActiveCategory] = useState("all");
-    const [selectedProduct, setSelectedProduct] = useState(null); // 🆕 state for modal
+    const [selectedProduct, setSelectedProduct] = useState(null);
 
-    const filteredSkills = products.filter(
-        (product) => activeCategory === "all" || product.category === activeCategory
+    const filteredProducts = products.filter(
+        (product) =>
+            activeCategory === "all" || product.category === activeCategory
     );
+    const categories = [
+        { id: "all", label: "All", icon: Car },
+        { id: "oil", label: "Oil", icon: Droplet },
+        { id: "stop oil", label: "Stop Oil", icon: Ban },
+    ];
+
 
     return (
-        <section className="py-24 px-4 relative">
-            <div className="container mx-auto max-w-5xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center" id="Products">
-                    Products <span className="text-button"> Services </span>
-                </h2>
-                <p className="text-center text-gray-600 font-normal mb-12 max-w-2xl mx-auto">
-                    Dicover new Our Prdoct to save your engine for every crush every time.
-                </p>
+        <section className="py-24 px-4 relative bg-gradient-to-b from-gray-50 to-gray-100">
+            <div className="container mx-auto max-w-6xl">
+                {/* Section Title */}
+                <div className="text-center mb-16">
+                    <h2
+                        className="text-3xl md:text-5xl font-extrabold mb-4"
+                        id="Products"
+                    >
+                        Our <span className="text-button">Products</span> & Services
+                    </h2>
+                    <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto">
+                        Discover our latest products designed to protect your engine in
+                        every condition. High-quality oils and additives tailored for
+                        performance and durability.
+                    </p>
+                </div>
 
-                {/* Category Filter */}
-                <div className="flex flex-wrap justify-center bg-gray-100 rounded-md gap-4 mb-12">
-                    {categories.map((category, key) => (
+                {/* ✅ Category Filter */}
+                <div className="flex flex-wrap justify-center gap-3 mb-12">
+                    {categories.map(({ id, label, icon: Icon }) => (
                         <button
-                            key={key}
-                            onClick={() => setActiveCategory(category)}
+                            key={id}
+                            onClick={() => setActiveCategory(id)}
                             className={cn(
-                                "px-2 py-1 rounded-full font-normal  transition-colors duration-300 capitalize",
-                                activeCategory === category
-<<<<<<< Updated upstream
-                                    ? "bg-button text-white"
-                                    : " text-button bg-#F9FAFB hover:bg-button hover:text-primary "
-=======
-                                    ? " text-gray-700"
-                                    : "text-gray-400"
->>>>>>> Stashed changes
+                                "flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 capitalize",
+                                activeCategory === id
+                                    ? "bg-button text-white shadow-md scale-105"
+                                    : "bg-gray-200 text-gray-700 hover:bg-button hover:text-white"
                             )}
                         >
-                            {category}
+                            <Icon className="w-4 h-4" />
+                            {label}
                         </button>
                     ))}
                 </div>
 
-                {/* Product Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {filteredSkills.map((product, key) => (
-<<<<<<< Updated upstream
-                        <div key={key}
-                             className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
-                        >
-                            <div className="h-48 overflow-hidden">
-                                <img  src={product.img}
-                                     alt={product.title}
-                                     className="w-full h-full object-contain bg-stone-200 transition-transform duration-500 group-hover:scale-110"
-                                />
-                            </div>
-                            <div className="p-6">
-
-                                <h3 className="text-xl font-semibold mb-1"> {product.title}</h3>
-                                <p className="text-muted-foreground text-sm mb-4">
-                                    {product.des}
-                                </p>
-                                <ul>
-                                    {products.map((product, key) => (
-                                        <li key={key}>{product.mwas}</li>
-                                    ))}
-                                </ul>
-
-=======
+                {/* ✅ Product Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                    {filteredProducts.map((product, key) => (
                         <div
                             key={key}
-                            className="group bg-gray-300 text-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg card-hover cursor-pointer"
-                            onClick={() => setSelectedProduct(product)} // 🆕 open modal
+                            className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer border border-gray-100"
+                            onClick={() => setSelectedProduct(product)}
                         >
-                            <div className="h-60 overflow-hidden bg-primary hover:bg-gray-200 transition-all duration-500 m-2 rounded-2xl p-4">
+                            {/* Image */}
+                            <div className="h-60 flex items-center justify-center bg-gradient-to-tr from-gray-100 to-gray-200 p-6">
                                 <img
                                     src={product.img}
                                     alt={product.title}
-                                    className="w-full h-full object-contain transition-all duration-500 group-hover:scale-110"
+                                    className="max-h-full object-contain transition-transform duration-500 group-hover:scale-110"
                                 />
                             </div>
-                            <div className="p-6">
-                                <h3 className="text-md text-gray-700 font-semibold mb-1">{product.title}</h3>
->>>>>>> Stashed changes
 
+                            {/* Info */}
+                            <div className="p-6">
+                                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                                    {product.title}
+                                </h3>
+                                <p className="text-sm text-gray-500 line-clamp-2">
+                                    {product.des}
+                                </p>
+                            </div>
+
+                            {/* Hover Overlay */}
+                            <div className="absolute inset-0 bg-button/90 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                <span className="text-white font-semibold">
+                  View Details →
+                </span>
                             </div>
                         </div>
                     ))}
                 </div>
-<<<<<<< Updated upstream
-                <div className="text-center mt-12">
+
+                {/* ✅ Extra Button */}
+                <div className="text-center mt-16">
                     <a
-                        className="cosmic-button w-fit flex items-center mx-auto gap-2"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-button to-blue-600 text-white font-semibold shadow-lg hover:scale-105 transition"
                         target="_blank"
                         href="https://github.com/machadop1407"
                     >
-                        Check My Github <ArrowRight size={16} />
+                        Check My Github <ArrowRight size={18} />
                     </a>
                 </div>
 
-=======
-
-                {/* Product Modal */}
+                {/* ✅ Modal */}
                 {selectedProduct && (
                     <ProductDetail
                         product={selectedProduct}
-                        onClose={() => setSelectedProduct(null)} // 🆕 close modal
+                        onClose={() => setSelectedProduct(null)}
                     />
                 )}
->>>>>>> Stashed changes
             </div>
         </section>
     );
 };
+
+export default ProductSection;
