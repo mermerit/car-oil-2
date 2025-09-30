@@ -22,7 +22,7 @@ export default function ProductDetail({ product, onClose }) {
         <AnimatePresence>
             {product && (
                 <motion.div
-                    className="fixed inset-0 bg-black/70 z-50 flex justify-center items-center p-2 sm:p-4"
+                    className="fixed inset-0 bg-black/70 z-50 flex justify-center items-center pr-10 sm:p-4"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -52,8 +52,8 @@ export default function ProductDetail({ product, onClose }) {
                             </button>
                         </div>
 
-                        {/* Body */}
-                        <div className="flex flex-col md:flex-row">
+                        {/* Body with scroll */}
+                        <div className="flex flex-col md:flex-row max-h-[80vh] overflow-y-auto">
                             {/* Product Image */}
                             <div className="flex-1 flex justify-center items-center bg-gray-100 p-4">
                                 <img
@@ -86,8 +86,8 @@ export default function ProductDetail({ product, onClose }) {
                                             />
                                         ))}
                                         <span className="ml-2 sm:ml-3 text-xs sm:text-sm">
-                      {rating} / 5
-                    </span>
+                                            {rating} / 5
+                                        </span>
                                     </div>
 
                                     {product.mwas && (
@@ -120,7 +120,6 @@ export default function ProductDetail({ product, onClose }) {
                                         <span className="font-medium">Contact via WhatsApp</span>
                                     </button>
                                 </div>
-
                             </div>
                         </div>
                     </motion.div>

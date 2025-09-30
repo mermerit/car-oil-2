@@ -22,7 +22,7 @@ const Detail = () => {
                 </p>
 
                 {/* Countries of Distribution */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-gray-800 gap-8 mb-16">
                     {[
                         {
                             region: "Southeast Asia",
@@ -45,12 +45,12 @@ const Detail = () => {
                     ].map((item, idx) => (
                         <div
                             key={idx}
-                            className="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition"
+                            className=" rounded-xl shadow-md p-6 border  hover:shadow-lg transition"
                         >
                             <h3 className="text-xl font-semibold text-button mb-3">
                                 {item.region}
                             </h3>
-                            <p className="text-gray-600">{item.countries}</p>
+                            <p className="text-gray-100">{item.countries}</p>
                         </div>
                     ))}
                 </div>
