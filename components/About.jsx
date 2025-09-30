@@ -14,7 +14,9 @@ const About = () => {
     return (
         <section
             id="About"
-            className="relative bg-gray-100 flex flex-col items-center justify-center text-white py-24 px-6 md:px-16 lg:px-32 w-full"
+            className="relative bg-gray-100 flex flex-col items-center justify-center
+             text-white py-24 px-6 md:px-16 lg:px-32 w-full"
+
 
         >
             {/* Overlay */}
@@ -37,7 +39,7 @@ const About = () => {
                 {/* Layout */}
                 <div className="flex flex-col lg:flex-row items-center gap-16">
                     {/* Image */}
-                    <div className="flex-1 flex justify-center">
+                    <div className="flex-1 flex-row justify-center">
                         <img
                             src="/background/zait-taza.png"
                             alt="Oil Bottle"

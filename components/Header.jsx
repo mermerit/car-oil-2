@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar.jsx";
 
 const Header = () => {
+    // Product images array
+    const productImages = [
+        "/products/zait-faraml.png",
+        "/products/daba-shin.png",
+        "/products/daba-sawz.png",
+        "/products/tank-30.png"
+    ];
+
+    // State for current image index
+    const [currentImage, setCurrentImage] = useState(0);
+
     return (
         <div
             className="relative min-h-screen mb-4 bg-cover bg-center flex flex-col items-center justify-center w-full overflow-hidden"
-            style={{ backgroundImage: "url('background/tank-700.jpg')" }}
+            style={{ backgroundImage: "url('background/tank-700.jpg')" }} // fixed background
             id="Header"
         >
             {/* Dark Overlay */}
@@ -13,47 +24,52 @@ const Header = () => {
 
             {/* Navbar */}
             <Navbar />
-            {/*<Navbar />*/}
 
             {/* Content */}
-            <div className="relative z-10 container mx-auto flex flex-col items-center justify-center text-center gap-12 py-16">
-                {/* Top Text */}
-                <div className="flex flex-col items-center justify-center text-primary mt-40">
-                    <h1 className="text-6xl sm:text-6xl md:text-[82px] font-semibold max-w-3xl opacity-0 animate-fade-in-delay-1 tracking-wider">
+            <div className=" mb-20 z-10 container mx-auto flex flex-col items-center justify-center text-center gap-12 py-16">
+                <div className="flex flex-col items-center justify-center text-primary">
+                    <h1 className="text-5xl sm:text-6xl md:text-[82px] font-semibold max-w-3xl
+                    opacity-0 animate-fade-in-delay-1 tracking-wider">
                         Extra B1 Oil
                     </h1>
                     <p className="text-lg md:text-2xl mt-6 opacity-0 animate-fade-in-delay-2">
-                        Design for best engine your car
+                        Premium Engine Oils for Modern & Classic Vehicles
                     </p>
-                    <div className="flex flex-row gap-4 mt-10">
-                        <button className="px-6 py-3 bg-button text-white rounded-lg shadow-lg hover:bg-button/80 transition">
-                            <a href="#Products">Products</a>
-                        </button>
-                    </div>
                 </div>
+                <div className="flex flex-row gap-4  ">
+                    <button className="px-6 py-3 bg-button text-white rounded-lg shadow-lg hover:bg-white hover:text-button
+                         transition duration-400">
+                        <a href="#Products">Products</a>
+                    </button> <button className="px-6 py-3 border border-button text-button rounded-lg shadow-lg
+                        hover:text-white hover:border-white transition duration-400">
+                    <a href="#Contact">Contact</a>
+                </button>
+                </div>
+            </div>
 
-                {/* Product Images */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+
+            {/* Product image in the bottom-center */}
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-3 z-20">
+                {/* Product Image */}
+                <a href="#Products">
                     <img
-                        src="/products/daba-shin.png"
-                        alt="Product 1"
-                        className="rounded-xl w-45 shadow-lg object-contain  p-4"
+                        src={productImages[currentImage]}
+                        alt={`Product ${currentImage + 1}`}
+                        className="w-32 sm:w-40 object-contain drop-shadow-lg"
                     />
-                    <img
-                        src="/products/daba-zard.png"
-                        alt="Product 2"
-                        className="rounded-xl w-45 shadow-lg object-contain p-4"
-                    />
-                    <img
-                        src="/products/zait-faraml.png"
-                        alt="Product 3"
-                        className="rounded-xl w-45 shadow-lg object-contain  p-6"
-                    />
-                    <img
-                        src="/products/tank-40.png"
-                        alt="Product 4"
-                        className="rounded-xl w-45 shadow-lg object-contain  p-4"
-                    />
+                </a>
+
+                {/* Dots below the product */}
+                <div className="flex gap-2">
+                    {productImages.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrentImage(index)}
+                            className={`w-3 h-3 rounded-full transition ${
+                                currentImage === index ? "bg-white" : "bg-gray-400/70"
+                            }`}
+                        ></button>
+                    ))}
                 </div>
             </div>
         </div>

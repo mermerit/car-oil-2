@@ -12,10 +12,10 @@ const Navbar = () => {
         <nav
             className="fixed top-0 left-0 w-full bg-gray-900/95 backdrop-blur-xl text-gray-300 z-50 shadow-md"
         >
-            <div className="max-w-6xl mx-auto flex justify-around items-center px-4 py-3">
+            <div className="max-w-6xl mx-auto flex justify-around items-center px-2 py-1">
                 {/* Logo */}
                 <a href="#Header">
-                    <img src="/background/logo-white.png" alt="logo" className="h-12 w-auto" />
+                    <img src="/background/logo-white.png" alt="logo" className="h-16 w-auto" />
                 </a>
 
                 {/* Desktop Menu */}

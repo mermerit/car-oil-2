@@ -59,12 +59,12 @@ export default function ProductDetail({ product, onClose }) {
                                 <img
                                     src={product.img}
                                     alt={product.title}
-                                    className="max-h-[200px] sm:max-h-[250px] md:max-h-[300px] w-auto object-contain rounded-lg shadow-md"
+                                    className="max-h-[200px] sm:max-h-[250px] md:max-h-[300px] w-auto object-contain "
                                 />
                             </div>
 
                             {/* Product Info */}
-                            <div className="flex-1 p-4 sm:p-6 flex flex-col justify-between bg-gradient-to-br from-gray-600 to-gray-500 text-white">
+                            <div className="flex-1 p-4 sm:p-6 flex flex-col justify-between bg-gradient-to-br from-gray-800 to-gray-700 text-primary">
                                 <div>
                                     <h3 className="text-lg sm:text-xl font-semibold mb-2">
                                         الوصف

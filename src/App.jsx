@@ -7,6 +7,11 @@ import Navbar from "../components/Navbar.jsx";
 import About from "../components/About.jsx";
 import ProductSection from "../components/ProductSection.jsx";
 import Contact from "../components/Contact.jsx";
+import Information from "../components/Information.jsx";
+import Production from "../components/Production.jsx";
+import Detail from "../components/Detail.jsx";
+
+
 
 
 
@@ -19,7 +24,10 @@ function App() {
           <Header/>
           <ProductSection/>
           <About/>
+          <Information/>
+          <Detail/>
           <Contact/>
+
 
           <Router>
               <Routes>
@@ -27,13 +35,9 @@ function App() {
               </Routes>
           </Router>
 
+
       </div>
-        // <Router>
-        //     <Routes>
-        //         <Route path="/" element={<Products />} />
-        //         <Route path="/product/:id" element={<ProductDetail />} />
-        //     </Routes>
-        // </Router>
+
     );
 }
 
