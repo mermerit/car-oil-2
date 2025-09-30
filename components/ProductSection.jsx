@@ -96,15 +96,6 @@ export const ProductSection = () => {
                 </div>
 
                 {/* ✅ Extra Button */}
-                <div className="text-center mt-16">
-                    <a
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-button to-blue-600 text-white font-semibold shadow-lg hover:scale-105 transition"
-                        target="_blank"
-                        href="https://github.com/machadop1407"
-                    >
-                        Check My Github <ArrowRight size={18} />
-                    </a>
-                </div>
 
                 {/* ✅ Modal */}
                 {selectedProduct && (

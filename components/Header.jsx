@@ -16,46 +16,46 @@ const Header = () => {
             {/*<Navbar />*/}
 
             {/* Content */}
+
             <div className="relative z-10 container mx-auto flex flex-col items-center justify-center text-center gap-12 py-16">
                 {/* Top Text */}
-                <div className="flex flex-col items-center justify-center text-primary mt-40">
-                    <h1 className="text-6xl sm:text-6xl md:text-[82px] font-semibold max-w-3xl opacity-0 animate-fade-in-delay-1 tracking-wider">
+                <div className="flex flex-col items-center justify-center text-primary ">
+                    <h1 className="text-5xl sm:text-6xl md:text-[82px] font-semibold max-w-3xl
+                    opacity-0 animate-fade-in-delay-1 tracking-wider">
                         Extra B1 Oil
                     </h1>
                     <p className="text-lg md:text-2xl mt-6 opacity-0 animate-fade-in-delay-2">
-                        Design for best engine your car
+                        Premium Engine Oils for Modern & Classic Vehicles
                     </p>
-                    <div className="flex flex-row gap-4 mt-10">
-                        <button className="px-6 py-3 bg-button text-white rounded-lg shadow-lg hover:bg-button/80 transition">
+                    <div className="flex flex-row gap-4 my-10 ">
+                        <button className="px-6 py-3 bg-button text-white rounded-lg shadow-lg hover:bg-white hover:text-button
+                         transition duration-400">
                             <a href="#Products">Products</a>
+                        </button> <button className="px-6 py-3 border border-button text-button rounded-lg shadow-lg
+                        hover:text-white hover:border-white transition duration-400">
+                            <a href="#Contact">Contact</a>
                         </button>
                     </div>
                 </div>
 
-                {/* Product Images */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                    <img
-                        src="/products/daba-shin.png"
-                        alt="Product 1"
-                        className="rounded-xl w-45 shadow-lg object-contain  p-4"
-                    />
-                    <img
-                        src="/products/daba-zard.png"
-                        alt="Product 2"
-                        className="rounded-xl w-45 shadow-lg object-contain p-4"
-                    />
-                    <img
-                        src="/products/zait-faraml.png"
-                        alt="Product 3"
-                        className="rounded-xl w-45 shadow-lg object-contain  p-6"
-                    />
-                    <img
-                        src="/products/tank-40.png"
-                        alt="Product 4"
-                        className="rounded-xl w-45 shadow-lg object-contain  p-4"
-                    />
-                </div>
+
+
             </div>
+            <a href="#Products"> <div className="">
+
+                <img
+                    src="/products/zait-faraml.png"
+                    alt="Product "
+                    className=" w-32 sm:w-45  object-contain absolute right-0 sm:right-6 bottom-0 "
+                /><img
+                src="/products/zait-faraml.png"
+                alt="Product 3"
+                className=" w-32 sm:w-45 object-contain absolute left-0 sm:left-6 bottom-0  "
+            />
+
+            </div></a>
+
+
         </div>
     );
 };
