@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -7,16 +8,37 @@ import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                "service_cotkat9", // 🔑 from EmailJS
+                "template_i8c41ij", // 🔑 from EmailJS
+                form.current,
+                "dBh5V5Ng4FsUZhAnr" // 🔑 from EmailJS (public key)
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    alert("✅ Message sent successfully!");
+                },
+                (error) => {
+                    console.log(error.text);
+                    alert("❌ Failed to send message, please try again.");
+                }
+            );
+    };
+
     return (
         <section
             id="Contact"
             className="relative py-24 px-6 md:px-16 lg:px-32 bg-cover bg-center"
-
         >
-            {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-gray-900/95  to-gray-900/95"></div>
 
-            {/* Content */}
             <div className="relative z-10 max-w-6xl mx-auto text-white">
                 {/* Title */}
                 <div className="text-center mb-16">
@@ -29,7 +51,7 @@ const Contact = () => {
 
                 {/* Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    {/* Info Card */}
+                    {/* Contact Info */}
                     <div className="bg-gray-900/80 backdrop-blur-lg p-10 rounded-2xl shadow-lg flex flex-col justify-between">
                         <div>
                             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
@@ -46,7 +68,6 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        {/* Social Media */}
                         <div className="flex gap-6 mt-10 text-3xl">
                             <a href="#" className="hover:text-green-500 transition">
                                 <WhatsAppIcon fontSize="inherit" />
@@ -60,7 +81,48 @@ const Contact = () => {
                         </div>
                     </div>
 
-
+                    {/* ✅ Email Form */}
+                    <div className="bg-gray-900/80 backdrop-blur-lg p-10 rounded-2xl shadow-lg">
+                        <h3 className="text-2xl font-semibold mb-6">Send us a Message</h3>
+                        <form ref={form} onSubmit={sendEmail} className="space-y-5">
+                            <div>
+                                <label className="block text-gray-300 mb-2">Your Name</label>
+                                <input
+                                    type="text"
+                                    name="user_name"
+                                    placeholder="Enter your name"
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-button"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-gray-300 mb-2">Your Email</label>
+                                <input
+                                    type="email"
+                                    name="user_email"
+                                    placeholder="Enter your email"
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-button"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-gray-300 mb-2">Message</label>
+                                <textarea
+                                    rows="4"
+                                    name="message"
+                                    placeholder="Write your message..."
+                                    required
+                                    className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-button"
+                                ></textarea>
+                            </div>
+                            <button
+                                type="submit"
+                                className="w-full py-3 bg-button text-white font-semibold rounded-lg hover:scale-105 transition"
+                            >
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>

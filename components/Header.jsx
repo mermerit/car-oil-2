@@ -26,7 +26,7 @@ const Header = () => {
             <Navbar />
 
             {/* Content */}
-            <div className=" mb-20 z-10 container mx-auto flex flex-col items-center justify-center text-center gap-12 py-16">
+            <div className=" max-sm:mb-20  z-10 container mx-auto flex flex-col items-center justify-center text-center gap-12 py-16">
                 <div className="flex flex-col items-center justify-center text-primary">
                     <h1 className="text-5xl sm:text-6xl md:text-[82px] font-semibold max-w-3xl
                     opacity-0 animate-fade-in-delay-1 tracking-wider">
@@ -36,7 +36,7 @@ const Header = () => {
                         Premium Engine Oils for Modern & Classic Vehicles
                     </p>
                 </div>
-                <div className="flex flex-row gap-4  ">
+                <div className="flex flex-row gap-4 opacity-0 animate-fade-in-delay-3 ">
                     <button className="px-6 py-3 bg-button text-white rounded-lg shadow-lg hover:bg-white hover:text-button
                          transition duration-400">
                         <a href="#Products">Products</a>
@@ -49,29 +49,31 @@ const Header = () => {
 
 
             {/* Product image in the bottom-center */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-3 z-20">
+
+            <div
+                className="absolute bottom-6 md:bottom-10 max-sm:left-1/2 max-sm:transform max-sm:-translate-x-1/2
+            md:right-60 opacity-0 animate-fade-in-delay-4
+            flex flex-col items-center gap-3 z-20"
+            >
                 {/* Product Image */}
-                <a href="#Products">
+                <a
+                    href="#Products"
+                    onClick={(e) => {
+                        e.preventDefault(); // prevent jump to #Products when just cycling images
+                        setCurrentImage((prev) =>
+                            prev === productImages.length - 1 ? 0 : prev + 1
+                        );
+                    }}
+                    className="cursor-pointer"
+                >
                     <img
                         src={productImages[currentImage]}
                         alt={`Product ${currentImage + 1}`}
-                        className="w-32 object-contain drop-shadow-lg"
+                        className="w-40 md:w-45 object-contain"
                     />
                 </a>
-
-                {/* Dots below the product */}
-                <div className="flex gap-2">
-                    {productImages.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setCurrentImage(index)}
-                            className={`w-3 h-3 rounded-full transition ${
-                                currentImage === index ? "bg-white" : "bg-gray-400/70"
-                            }`}
-                        ></button>
-                    ))}
-                </div>
             </div>
+
         </div>
     );
 };

@@ -22,7 +22,7 @@ const Detail = () => {
                 </p>
 
                 {/* Countries of Distribution */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-gray-800 gap-8 mb-16">
+                <div className="flex flex-wrap justify-center   gap-8 mb-16">
                     {[
                         {
                             region: "Southeast Asia",
@@ -45,7 +45,7 @@ const Detail = () => {
                     ].map((item, idx) => (
                         <div
                             key={idx}
-                            className=" rounded-xl shadow-md p-6 border  hover:shadow-lg transition"
+                            className=" rounded-xl shadow-md p-6 border w-full sm:w-[80%] md:w-[30%] bg-gray-800  hover:shadow-lg transition"
                         >
                             <h3 className="text-xl font-semibold text-button mb-3">
                                 {item.region}

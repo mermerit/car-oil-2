@@ -3,23 +3,30 @@ import { useState } from "react";
 import { cn } from "../src/lib/utils.js";
 import { products } from "../data/index.jsx";
 import ProductDetail from "./ProductDetail.jsx";
-import { Car, Droplet, Ban } from "lucide-react";
+import { Car, Droplet, Ban ,ThermometerSnowflake, Shield } from "lucide-react";
 
 
 export const ProductSection = () => {
     const [activeCategory, setActiveCategory] = useState("all");
     const [selectedProduct, setSelectedProduct] = useState(null);
+    const [visibleCount, setVisibleCount] = useState(9); // 👈 show 3 rows initially (3x3 grid)
 
     const filteredProducts = products.filter(
         (product) =>
             activeCategory === "all" || product.category === activeCategory
     );
+
     const categories = [
         { id: "all", label: "All", icon: Car },
         { id: "oil", label: "Oil", icon: Droplet },
-        { id: "stop oil", label: "Stop Oil", icon: Ban },
+        { id: "cooler", label: "cooler", icon: ThermometerSnowflake },
+        { id: "protect", label: "protect", icon: Shield },
+        { id: "break oil", label: "Stop Oil", icon: Ban },
     ];
 
+    const handleShowMore = () => {
+        setVisibleCount((prev) => prev + 9); // 👈 add 3 more rows (3x3 = 9 items)
+    };
 
     return (
         <section className="py-24 px-4 relative bg-gradient-to-b from-gray-50 to-gray-100">
@@ -41,10 +48,14 @@ export const ProductSection = () => {
 
                 {/* ✅ Category Filter */}
                 <div className="flex flex-wrap justify-center gap-3 mb-12">
+
                     {categories.map(({ id, label, icon: Icon }) => (
                         <button
                             key={id}
-                            onClick={() => setActiveCategory(id)}
+                            onClick={() => {
+                                setActiveCategory(id);
+                                setVisibleCount(9); // reset count when switching category
+                            }}
                             className={cn(
                                 "flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 capitalize",
                                 activeCategory === id
@@ -60,7 +71,7 @@ export const ProductSection = () => {
 
                 {/* ✅ Product Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {filteredProducts.map((product, key) => (
+                    {filteredProducts.slice(0, visibleCount).map((product, key) => (
                         <div
                             key={key}
                             className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer border border-gray-100"
@@ -71,7 +82,7 @@ export const ProductSection = () => {
                                 <img
                                     src={product.img}
                                     alt={product.title}
-                                    className="max-h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                                    className="max-h-full object-cover transition-transform duration-500 scale-110"
                                 />
                             </div>
 
@@ -87,23 +98,33 @@ export const ProductSection = () => {
 
                             {/* Hover Overlay */}
                             <div className="absolute inset-0 bg-button/90 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                <span className="text-white font-semibold">
-                  View Details →
-                </span>
+                                <span className="text-white font-semibold">
+                                    View Details →
+                                </span>
                             </div>
                         </div>
                     ))}
                 </div>
+                {/* ✅ Show More Button (works on all devices) */}
+                {visibleCount < filteredProducts.length && (
+                    <div className="mt-12 flex justify-center">
+                        <button
+                            onClick={handleShowMore}
+                            className="px-6 py-3 bg-button text-white rounded-full shadow-md hover:scale-105 transition"
+                        >
+                            Show More
+                        </button>
+                    </div>
+                )}
 
-                {/* ✅ Extra Button */}
-
-                {/* ✅ Modal */}
+                {/* ✅ Product Detail Modal */}
                 {selectedProduct && (
                     <ProductDetail
                         product={selectedProduct}
                         onClose={() => setSelectedProduct(null)}
                     />
                 )}
+
             </div>
         </section>
     );

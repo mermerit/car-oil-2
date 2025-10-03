@@ -12,7 +12,7 @@ const Navbar = () => {
         <nav
             className="fixed top-0 left-0 w-full bg-gray-900/95 backdrop-blur-xl text-gray-300 z-50 shadow-md"
         >
-            <div className="max-w-6xl mx-auto flex justify-around items-center px-2 py-1">
+            <div className="max-w-6xl container flex  justify-between items-center  py-1">
                 {/* Logo */}
                 <a href="#Header">
                     <img src="/background/logo-white.png" alt="logo" className="h-16 w-auto" />
@@ -21,10 +21,13 @@ const Navbar = () => {
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex gap-10 font-medium">
                     <a href="#Header" className="hover:text-button transition">Home</a>
-                    <a href="#About" className="hover:text-button transition">About Us</a>
                     <a href="#Products" className="hover:text-button transition">Products</a>
+                    <a href="#About" className="hover:text-button transition">About Us</a>
                     <a href="#Contact" className="hover:text-button transition">Contact</a>
                 </ul>
+                <h1>
+
+                </h1>
 
                 {/* Mobile Menu Button */}
                 <div className="md:hidden cursor-pointer">
