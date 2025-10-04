@@ -9,7 +9,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 
 const Contact = () => {
     const form = useRef();
-  
+
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -52,27 +52,28 @@ const Contact = () => {
                 {/* Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Contact Info */}
-                    <div className="bg-gray-900/80 backdrop-blur-lg p-10 rounded-2xl shadow-lg flex flex-col justify-between">
+                    <div className="bg-gray-900/80 backdrop-blur-lg p-10 rounded-2xl shadow-lg flex flex-col ">
                         <div>
-                            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-                            <div className="space-y-5 text-gray-300 text-lg">
+                            <p className="font-semibold mb-6 text-xl">Contact Information</p>
+
+                            <div className="space-y-5 text-gray-300 text-md">
                                 <p className="flex items-center gap-3">
-                                    <LocationOnIcon className="text-button" /> Erbil, Iraq
+                                    <LocationOnIcon className="text-button" /> Baghdad, Iraq
                                 </p>
                                 <p className="flex items-center gap-3">
-                                    <PhoneIcon className="text-button" /> +964 750 115 9786
+                                    <PhoneIcon className="text-button" /> +964 783 145 6481
                                 </p>
                                 <p className="flex items-center gap-3">
-                                    <EmailIcon className="text-button" /> info@extrab1oil.com
+                                    <EmailIcon className="text-button" /> extrab1.iq.gmail.com
                                 </p>
                             </div>
                         </div>
 
                         <div className="flex gap-6 mt-10 text-3xl">
-                            <a href="#" className="hover:text-green-500 transition">
+                            <a href="https://wa.me/9647831456481" className="hover:text-green-500 transition">
                                 <WhatsAppIcon fontSize="inherit" />
                             </a>
-                            <a href="#" className="hover:text-blue-500 transition">
+                            <a href="https://www.facebook.com/wolver.comepany?mibextid=ZbWKwL" className="hover:text-blue-500 transition">
                                 <FacebookIcon fontSize="inherit" />
                             </a>
                             <a href="#" className="hover:text-pink-500 transition">

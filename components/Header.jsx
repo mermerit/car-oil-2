@@ -7,7 +7,8 @@ const Header = () => {
         "/products/zait-faraml.png",
         "/products/daba-shin.png",
         "/products/daba-sawz.png",
-        "/products/tank-30.png"
+        "/products/tank-30.png",
+
     ];
 
     // State for current image index

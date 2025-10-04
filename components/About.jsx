@@ -3,10 +3,11 @@ import StarIcon from "@mui/icons-material/Star";
 import PeopleIcon from "@mui/icons-material/People";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
+import OilBarrelIcon from '@mui/icons-material/OilBarrel';
 
 const stats = [
-    { value: "10+", label: "Years of Excellence", icon: <StarIcon /> },
-    { value: "50K+", label: "Happy Customers", icon: <PeopleIcon /> },
+    { value: "30+", label: "Years of Excellence", icon: <StarIcon /> },
+    { value: "66+", label: "General car-related Items", icon: <OilBarrelIcon /> },
     { value: "100%", label: "Premium Quality", icon: <WorkspacePremiumIcon /> },
     { value: "24/7", label: "Customer Support", icon: <SupportAgentIcon /> },
 ];

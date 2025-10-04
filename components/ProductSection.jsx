@@ -3,7 +3,8 @@ import { useState } from "react";
 import { cn } from "../src/lib/utils.js";
 import { products } from "../data/index.jsx";
 import ProductDetail from "./ProductDetail.jsx";
-import { Car, Droplet, Ban ,ThermometerSnowflake, Shield } from "lucide-react";
+import { Car, Droplet, Bike,ThermometerSnowflake, Shield } from "lucide-react";
+
 
 
 export const ProductSection = () => {
@@ -19,9 +20,9 @@ export const ProductSection = () => {
     const categories = [
         { id: "all", label: "All", icon: Car },
         { id: "oil", label: "Oil", icon: Droplet },
-        { id: "cooler", label: "cooler", icon: ThermometerSnowflake },
-        { id: "protect", label: "protect", icon: Shield },
-        { id: "break oil", label: "Stop Oil", icon: Ban },
+        { id: "bike oil", label: "Bike Oil", icon: Bike },
+        { id: "cooler oil", label: "Cooler oil", icon: ThermometerSnowflake },
+        { id: "diesel oil", label: "Diesel oil", icon: Shield },
     ];
 
     const handleShowMore = () => {
@@ -82,7 +83,7 @@ export const ProductSection = () => {
                                 <img
                                     src={product.img}
                                     alt={product.title}
-                                    className="max-h-full object-cover transition-transform duration-500 scale-110"
+                                    className="max-h-full object-cover transition-transform duration-500 "
                                 />
                             </div>
 
