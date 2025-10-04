@@ -9,7 +9,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 
 const Contact = () => {
     const form = useRef();
-
+  
     const sendEmail = (e) => {
         e.preventDefault();
 
