@@ -156,7 +156,7 @@ const Contact = () => {
                             </p>
                         )}
                         {status === "error" && (
-                            <p className="mt-4 text-red-400 text-center font-medium">
+                            <p className="mt-4 text-red-400 text-center font-medium" >
                                 ❌ Failed to send message. Please try again later.
                             </p>
                         )}

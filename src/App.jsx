@@ -10,11 +10,8 @@ import Contact from "../components/Contact.jsx";
 import Information from "../components/Information.jsx";
 import Production from "../components/Production.jsx";
 import Detail from "../components/Detail.jsx";
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 8a35d218ebf232c821dc7f693a868fc693c26dc8
 
 
 

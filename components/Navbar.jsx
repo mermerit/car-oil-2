@@ -49,8 +49,8 @@ const Navbar = () => {
             {showMobileMenu && (
                 <div className="md:hidden bg-gray-900/95 backdrop-blur-xl w-full py-8 px-6 flex flex-col gap-6 text-lg font-medium border-t border-gray-700">
                     <a href="#Header" onClick={() => setShowMobileMenu(false)}>Home</a>
-                    <a href="#About" onClick={() => setShowMobileMenu(false)}>About Us</a>
                     <a href="#Products" onClick={() => setShowMobileMenu(false)}>Products</a>
+                    <a href="#About" onClick={() => setShowMobileMenu(false)}>About Us</a>
                     <a href="#Contact" onClick={() => setShowMobileMenu(false)}>Contact</a>
 
                     {/* Social Links */}

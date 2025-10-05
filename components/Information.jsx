@@ -10,8 +10,6 @@ const Information = () => {
         >
             {/* ✅ Bottom Fade Overlay */}
             <div className="absolute inset-0 bg-black/60"></div>
-            {/*<div className="absolute bottom-0 left-0 right-0 h-30 bg-gradient-to-t*/}
-            {/*from-gray-100 to-transparent"></div>*/}
 
             {/* ✅ Content */}
             <div className="relative container z-10 max-w-3xl  flex flex-col  justify-center items-center   ">
