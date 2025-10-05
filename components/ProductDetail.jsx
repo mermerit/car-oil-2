@@ -4,12 +4,11 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ProductDetail({ product, onClose }) {
-    const phoneNumber = "9647501159786";
+    const phoneNumber = "9647831456481";
 
     // 🔒 Lock scrolling when modal is open (works on desktop + mobile)
     useEffect(() => {
         const body = document.body;
-<<<<<<< HEAD
         let scrollY = 0;
 
         if (product) {
@@ -43,37 +42,6 @@ export default function ProductDetail({ product, onClose }) {
 
 
 
-=======
-
-        if (product) {
-            // Store current scroll position
-            const scrollY = window.scrollY;
-            body.style.position = "fixed";
-            body.style.top = `-${scrollY}px`;
-            body.style.width = "100%";
-            body.style.overflow = "hidden";
-        } else {
-            // Restore scroll position
-            const scrollY = body.style.top;
-            body.style.position = "";
-            body.style.top = "";
-            body.style.width = "";
-            body.style.overflow = "";
-            if (scrollY) window.scrollTo(0, parseInt(scrollY || "0") * -1);
-        }
-
-        // Cleanup on unmount
-        return () => {
-            const scrollY = body.style.top;
-            body.style.position = "";
-            body.style.top = "";
-            body.style.width = "";
-            body.style.overflow = "";
-            if (scrollY) window.scrollTo(0, parseInt(scrollY || "0") * -1);
-        };
-    }, [product]);
-
->>>>>>> 8a35d218ebf232c821dc7f693a868fc693c26dc8
     if (!product) return null;
 
     const sendViaWhatsApp = () => {
@@ -103,11 +71,7 @@ export default function ProductDetail({ product, onClose }) {
 
                     {/* Modal */}
                     <motion.div
-<<<<<<< HEAD
                         className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl flex flex-col max-h-[85vh]"
-=======
-                        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl flex flex-col max-h-[90vh]"
->>>>>>> 8a35d218ebf232c821dc7f693a868fc693c26dc8
                         initial={{ scale: 0.9, opacity: 0, y: 30 }}
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         exit={{ scale: 0.9, opacity: 0, y: 30 }}
@@ -149,7 +113,7 @@ export default function ProductDetail({ product, onClose }) {
                             {product.mwas && (
                                 <div>
                                     <h3 className="text-xl sm:text-2xl font-semibold mb-2">
-                                        Features
+                                        Specifications
                                     </h3>
                                     <ul className="list-disc list-inside space-y-1 text-sm">
                                         {product.mwas.map((feature, idx) => (
