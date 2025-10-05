@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react()  ,tailwindcss()] ,
   optimizeDeps: {
-    include: ["framer-motion"],
+    include: ["framer-motion","@emailjs/browser"],
   },
   server: {
     mimeTypes: {

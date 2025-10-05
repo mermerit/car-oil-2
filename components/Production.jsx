@@ -32,8 +32,7 @@ const Production = () => {
                         deliver maximum performance, protection, and durability for your car’s engine.
                     </p>
                     <ul className="space-y-3 text-gray-700">
-                        <li>✅ Premium raw materials</li>
-                        <li>✅ Advanced refining technology</li>
+                        <li>✅ Premium raw materials</li>                        <li>✅ Advanced refining technology</li>
                         <li>✅ International quality certifications</li>
                         <li>✅ Engine protection & long-lasting performance</li>
                     </ul>

@@ -4,8 +4,8 @@ const Information = () => {
     return (
         <section
             id="About"
-            className="relative bg-gray-100 flex bg-cover bg-center  h-full flex-col items-center
-            text-white py-10 px-6 md:px-16 lg:px-32 w-full"
+            className="relative bg-gray-100 flex bg-cover bg-center  h-screen flex-col items-center justify-center
+            text-white  md:px-16 lg:px-32 w-full"
             style={{ backgroundImage: "url('background/construction.jpg')" }}
         >
             {/* ✅ Bottom Fade Overlay */}
@@ -14,7 +14,7 @@ const Information = () => {
             {/*from-gray-100 to-transparent"></div>*/}
 
             {/* ✅ Content */}
-            <div className="relative z-10 max-w-3xl  flex flex-col  justify-center items-center   ">
+            <div className="relative container z-10 max-w-3xl  flex flex-col  justify-center items-center   ">
                 <h1 className="text-3xl md:text-5xl font-semibold mb-2">
                     <span className="text-button" >Extra B1 </span> Product Specifications</h1>
 
