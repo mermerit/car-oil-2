@@ -80,7 +80,7 @@ const Contact = () => {
                                 <WhatsAppIcon fontSize="inherit" />
                             </a>
                             <a
-                                href="https://www.facebook.com/wolver.comepany?mibextid=ZbWKwL"
+                                href="https://www.facebook.com/share/17dCkLaYJQ/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="hover:text-blue-500 transition-transform transform hover:scale-110"
