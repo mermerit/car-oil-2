@@ -15,10 +15,10 @@ const Contact = () => {
 
         emailjs
             .sendForm(
-                "service_cotkat9", // 🔑 from EmailJS
-                "template_i8c41ij", // 🔑 from EmailJS
+                "service_n3ttn1j", // 🔑 from EmailJS
+                "template_0orvaoe", // 🔑 from EmailJS
                 form.current,
-                "dBh5V5Ng4FsUZhAnr" // 🔑 from EmailJS (public key)
+                "nGHr8zYqKeBtYX-vi" // 🔑 from EmailJS (public key)
             )
             .then(
                 (result) => {

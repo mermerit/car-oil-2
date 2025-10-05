@@ -1,11 +1,44 @@
-import { CheckCircleIcon, X, Star } from "lucide-react";
+import { useEffect } from "react";
+import {  X } from "lucide-react";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ProductDetail({ product, onClose }) {
-    if (!product) return null;
-
     const phoneNumber = "9647501159786";
+
+    // 🔒 Lock scrolling when modal is open (works on desktop + mobile)
+    useEffect(() => {
+        const body = document.body;
+
+        if (product) {
+            // Store current scroll position
+            const scrollY = window.scrollY;
+            body.style.position = "fixed";
+            body.style.top = `-${scrollY}px`;
+            body.style.width = "100%";
+            body.style.overflow = "hidden";
+        } else {
+            // Restore scroll position
+            const scrollY = body.style.top;
+            body.style.position = "";
+            body.style.top = "";
+            body.style.width = "";
+            body.style.overflow = "";
+            if (scrollY) window.scrollTo(0, parseInt(scrollY || "0") * -1);
+        }
+
+        // Cleanup on unmount
+        return () => {
+            const scrollY = body.style.top;
+            body.style.position = "";
+            body.style.top = "";
+            body.style.width = "";
+            body.style.overflow = "";
+            if (scrollY) window.scrollTo(0, parseInt(scrollY || "0") * -1);
+        };
+    }, [product]);
+
+    if (!product) return null;
 
     const sendViaWhatsApp = () => {
         const message = `مرحباً 👋
@@ -19,7 +52,6 @@ export default function ProductDetail({ product, onClose }) {
         window.open(url, "_blank");
     };
 
-    const rating = product.rating || 5;
 
     return (
         <AnimatePresence>
@@ -57,16 +89,14 @@ export default function ProductDetail({ product, onClose }) {
 
                         {/* Content */}
                         <div className="overflow-y-auto p-4 sm:p-6 space-y-12 bg-gradient-to-br bg-gray-700 text-gray-100">
-                            {/* Image */}
                             <div className="flex justify-center mb-4">
                                 <img
                                     src={product.img}
                                     alt={product.title}
-                                    className="max-h-[200px] sm:max-h-[240px] w-auto object-contain "
+                                    className="max-h-[200px] sm:max-h-[240px] w-auto object-contain"
                                 />
                             </div>
 
-                            {/* Description */}
                             <div>
                                 <h3 className="text-lg sm:text-xl font-semibold mb-2">
                                     Description
@@ -76,7 +106,6 @@ export default function ProductDetail({ product, onClose }) {
                                 </p>
                             </div>
 
-                            {/* Features */}
                             {product.mwas && (
                                 <div>
                                     <h3 className="text-xl sm:text-2xl font-semibold mb-2">
@@ -90,7 +119,6 @@ export default function ProductDetail({ product, onClose }) {
                                 </div>
                             )}
 
-                            {/* Typical Properties */}
                             {product.typical && (
                                 <div>
                                     <h3 className="text-xl sm:text-2xl font-semibold mb-2">
@@ -104,7 +132,6 @@ export default function ProductDetail({ product, onClose }) {
                                 </div>
                             )}
 
-                            {/* Standards */}
                             {product.standard && (
                                 <div>
                                     <h3 className="text-xl sm:text-2xl font-semibold mb-2">
@@ -118,7 +145,6 @@ export default function ProductDetail({ product, onClose }) {
                                 </div>
                             )}
 
-                            {/* Applications */}
                             {product.aplication && (
                                 <div>
                                     <h3 className="text-xl sm:text-2xl font-semibold mb-2">
@@ -132,7 +158,6 @@ export default function ProductDetail({ product, onClose }) {
                                 </div>
                             )}
 
-                            {/* Packing */}
                             {product.Packing && (
                                 <div>
                                     <h3 className="text-xl sm:text-2xl font-semibold mb-2">
