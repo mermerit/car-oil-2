@@ -52,9 +52,8 @@ export const products = [
             "Drums of 200 litres"
         ],
 
+        
 
-        // iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-        // link: "/ui.earth.com",
         category:"oil"
     },
 
@@ -359,14 +358,31 @@ export const products = [
     {
         id: 9,
         title:"Extra B-One 0W-1G",
-        des: "Extra P One Malaysia is currently in the process of developing its products specifically for hybrid vehicles. At the same time, the company is implementing overall improvements and updates to its product line, aiming to enhance performance, quality, and innovation, in order to stand out more prominently among global oil companies.",
+        des:"Malaysian Extra P1 0W-16 oil is one of the ads specifically for modern Japanese and Korean engines that are based on fuel economy (fuel economy) technology and need very low viscosity oil.\n" +
+            "Below is an explanation of its specifications and the meaning of its SQ rating",
         img:"products/zait-gas.png",
-        mwas:[],
+        mwas:["The number 0W means that the oil has excellent operability at very low temperatures (it is easier to start the engine in the cold).",
+        "The number 16 indicates that the oil is very light at high temperatures, which reduces frictional resistance inside the engine and saves fuel consumption.",
+            "Fully synthetic oil",
+            "Added high-performance American additives to improve oxidation resistance and stabilize viscosity",
+            "Contains high quality detergents and dispersants that prevent deposits and keep the engine clean from the inside.",
+        "Reduces fuel consumption by up to 3-5%.",
+        "Maintains engine cool and constant viscosity under all conditions.",
+        "Longer engine life and replacement range up to 15,000 km depending on driving conditions.",
+        "Superior performance in extreme heat and cold"],
 
         typical:[
+            "API Service Category: SP / SP+ (SQ)",
+            "🔹The SQ classification is the latest generation after SP in the American API standards, and indicates:",
+            "Excellent protection from deposits and corrosion.",
+            "Optimal performance with turbocharged and GDI engines.",
+            "Reduce the phenomenon of LSPI (low-speed premature explosion).",
+            "Significant improvement in fuel economy and lower emissions.",
+            "🔹ILSAC GF-6B :This means that the oil is approved for small and very modern gasoline engines and provides higher performance than GF-6A."
         ],
         standard:[
-
+            "Suitable for: Toyota, Nissan, Honda, Mitsubishi, Suzuki, Hyundai, Kia and other modern engines designed for very light oils.",
+            "Ideal for Hybrid and Eco cars."
         ],
 
         aplication:[

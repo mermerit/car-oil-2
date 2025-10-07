@@ -58,10 +58,10 @@ export const ProductSection = () => {
                                 setVisibleCount(9); // reset count when switching category
                             }}
                             className={cn(
-                                "flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 capitalize",
+                                "flex items-center gap-2 px-5 py-2 rounded-full text-sm font-normal transition-all duration-300 capitalize",
                                 activeCategory === id
                                     ? "bg-button text-white shadow-md scale-105"
-                                    : "bg-gray-200 text-gray-700 hover:bg-button hover:text-white"
+                                    : "bg-gray-200 text-gray-700 fon hover:bg-button hover:text-white"
                             )}
                         >
                             <Icon className="w-4 h-4" />
@@ -89,12 +89,12 @@ export const ProductSection = () => {
 
                             {/* Info */}
                             <div className="p-6">
-                                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                                <h1 className="text-lg font-semibold text-gray-800 mb-2">
                                     {product.title}
-                                </h3>
-                                <p className="text-sm text-gray-500 line-clamp-2">
+                                </h1>
+                                <h3 className=" text-[9px] text-gray-500 line-clamp-2">
                                     {product.des}
-                                </p>
+                                </h3>
                             </div>
 
                             {/* Hover Overlay */}

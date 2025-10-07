@@ -102,20 +102,20 @@ export default function ProductDetail({ product, onClose }) {
                             </div>
 
                             <div>
-                                <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                                <h3 className="text-lg sm:text-xl bg-gray-800 rounded-full py-2 font-semibold mb-2">
                                     Description
                                 </h3>
-                                <p className="text-sm sm:text-base leading-relaxed">
+                                <h3 className="text-sm sm:text-base leading-relaxed">
                                     {product.des}
-                                </p>
+                                </h3>
                             </div>
 
                             {product.mwas && (
                                 <div>
-                                    <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+                                    <h3 className="text-xl sm:text-2xl font-semibold mb-2 bg-gray-800 rounded-full py-2">
                                         Specifications
                                     </h3>
-                                    <ul className="list-disc list-inside space-y-1 text-sm">
+                                    <ul className="list-disc list-inside space-y-4 text-sm">
                                         {product.mwas.map((feature, idx) => (
                                             <li key={idx}>{feature}</li>
                                         ))}
@@ -125,10 +125,10 @@ export default function ProductDetail({ product, onClose }) {
 
                             {product.typical && (
                                 <div>
-                                    <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+                                    <h3 className="text-xl sm:text-2xl font-semibold mb-2 bg-gray-800 rounded-full py-2">
                                         Typical Properties
                                     </h3>
-                                    <ul className="list-disc list-inside space-y-1 text-sm">
+                                    <ul className="list-disc list-inside space-y-4 text-sm">
                                         {product.typical.map((prop, idx) => (
                                             <li key={idx}>{prop}</li>
                                         ))}
@@ -138,10 +138,10 @@ export default function ProductDetail({ product, onClose }) {
 
                             {product.standard && (
                                 <div>
-                                    <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+                                    <h3 className="text-xl sm:text-2xl font-semibold mb-2 bg-gray-800 rounded-full py-2">
                                         Standards & Approvals
                                     </h3>
-                                    <ul className="list-disc list-inside space-y-1 text-sm">
+                                    <ul className="list-disc list-inside space-y-4 text-sm">
                                         {product.standard.map((std, idx) => (
                                             <li key={idx}>{std}</li>
                                         ))}
@@ -151,12 +151,12 @@ export default function ProductDetail({ product, onClose }) {
 
                             {product.aplication && (
                                 <div>
-                                    <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+                                    <h3 className="text-xl sm:text-2xl font-semibold mb-2 bg-gray-800 rounded-full py-2">
                                         Applications
                                     </h3>
-                                    <ul className="list-disc list-inside space-y-1 text-sm">
+                                    <ul className="list-disc list-inside space-y-4 text-sm  ">
                                         {product.aplication.map((app, idx) => (
-                                            <li key={idx}>{app}</li>
+                                            <li  key={idx}>{app}</li>
                                         ))}
                                     </ul>
                                 </div>
@@ -164,7 +164,7 @@ export default function ProductDetail({ product, onClose }) {
 
                             {product.Packing && (
                                 <div>
-                                    <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+                                    <h3 className="text-xl sm:text-2xl font-semibold mb-2 bg-gray-800 rounded-full py-2">
                                         Packing
                                     </h3>
                                     <ul className="list-disc list-inside space-y-1 text-sm">
