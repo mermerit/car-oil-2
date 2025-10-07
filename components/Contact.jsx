@@ -54,7 +54,7 @@ const Contact = () => {
                 {/* Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Contact Info */}
-                    <div className="bg-gray-900/80 backdrop-blur-lg p-10 rounded-2xl shadow-xl flex flex-col justify-between">
+                    <div className="bg-gray-900/80 backdrop-blur-lg p-10 rounded-2xl shadow-xl flex flex-col ">
                         <div>
                             <p className="font-semibold mb-6 text-xl">Contact Information</p>
                             <div className="space-y-5 text-gray-300 text-md">
