@@ -45,11 +45,10 @@ export default function ProductDetail({ product, onClose }) {
     if (!product) return null;
 
     const sendViaWhatsApp = () => {
-        const message = `مرحباً 👋
-أرغب في معرفة المزيد عن المنتج:
+        const message = ` Hello I want to know more about this product
 
-📌 الاسم: ${product.title}
-📝 الوصف: ${product.des}`;
+📌 Name: ${product.title}
+📝 Description: ${product.des}`;
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
             message
         )}`;

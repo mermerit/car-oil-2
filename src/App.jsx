@@ -12,10 +12,6 @@ import Production from "../components/Production.jsx";
 import Detail from "../components/Detail.jsx";
 
 
-
-
-
-
 function App() {
 
 

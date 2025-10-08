@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@import url('https://fonts.cdnfonts.com/css/geist');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
 @theme{
     --color-background:hsl(var(--background));
     --color-foreground: hsl(var(--foreground));
@@ -88,7 +92,6 @@
 
 html {
     @apply scroll-smooth;
-    font-family: 'Changa', sans-serif;
     background: white;
 
 }
@@ -145,28 +148,17 @@ html {
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 /* Headings */
-h1, h2, h3, .hero-title {
-    font-family: 'Geist', sans-serif;
-    letter-spacing: 1px;
 
-}
-
-/* Body text */
-body, p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-}
 
 /* Headings */
 h1, h2, h3, .hero-title {
-    font-family: 'Geist', sans-serif;
+    font-family: 'Geist',sans-serif;
     letter-spacing: 1px;
 }
 
 /* Body text */
 body, p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto',sans-serif;
     font-size: 16px;
     line-height: 1.6;
 }

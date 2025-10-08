@@ -55,8 +55,8 @@ const Navbar = () => {
 
                     {/* Social Links */}
                     <div className="flex gap-6 pt-6 text-2xl">
-                        <a href="#" className="hover:text-green-500"><WhatsAppIcon /></a>
-                        <a href="#" className="hover:text-blue-500"><FacebookIcon /></a>
+                        <a href="https://wa.me/9647831456481" className="hover:text-green-500"><WhatsAppIcon /></a>
+                        <a href="https://www.facebook.com/share/17dCkLaYJQ/" className="hover:text-blue-500"><FacebookIcon /></a>
                         <a href="#" className="hover:text-pink-500"><InstagramIcon /></a>
                     </div>
                 </div>

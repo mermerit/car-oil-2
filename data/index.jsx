@@ -52,11 +52,10 @@ export const products = [
             "Drums of 200 litres"
         ],
 
+        short:["Diesel" , "Protection" , "Performance"],
 
-
-        category:"oil"
+        category:"diesel"
     },
-
     {
         id: 2,
         title: "Extra B-One 5W-20",
@@ -86,9 +85,7 @@ export const products = [
            "ILSAC GF-6A (Compliant with Modern Requirements)",
            "Suitable for specifications of some international manufacturers such as Ford, Chrysler, Honda, Toyota, and others."
         ],
-
         aplication:[
-
          "Modern gasoline cars (naturally aspirated and turbocharged).",
          "GDI (gasoline direct injection) engines." ,
          "Hybrid cars.",
@@ -98,10 +95,9 @@ export const products = [
             "1 litre",
             "4 litres",
             "5 litres",
-
         ],
-
-        category:"oil"
+        short:["Gasoline" , "Protection" , "Economy"],
+        category:"gasoline"
     },
     {
         id: 3,
@@ -150,10 +146,8 @@ export const products = [
             "5 litres",
 
         ],
-
-        category:"oil"
-
-
+        short:["Gasoline" , "Protection" , "Economy"],
+        category:"gasoline"
     },
     {
         id: 4,
@@ -162,8 +156,6 @@ export const products = [
             "offering the perfect combination of protection and friction. It boasts excellent wear and oxidation resistance," +
             " making it an ideal choice for modern engines used in harsh operating conditions.",
         img: "products/daba-sawz.png",
-        // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-        // link: "/ui.yoom.com",
         mwas:["Strong engine protection at high temperatures." ,
         "Excellent viscosity stability prevents thermal breakdown." ,
         "High oxidation resistance and extended oil life." ,
@@ -202,50 +194,50 @@ export const products = [
             "5 litres",
             "Drums of 200 litres"
         ],
-        category:"oil"
 
+        short:["Gasoline" , "Protection" , "Stability "],
+
+        category:"gasoline"
 
     },
     {
         id: 5,
-        title:"Extra B-One 10W-40",
-        des: "Extra B-One 10W-40 is a multi-grade motor oil formulated with advanced technology, " +
-            "offering the perfect combination of protection and friction. It boasts excellent wear and oxidation resistance," +
-            " making it an ideal choice for modern engines used in harsh operating conditions.",
+        title:"Extra B-One 10W-30",
+        des: "Malaysia's Extra B-One 10W-30 is a multi-grade engine oil designed with high technology to provide strong engine protection " +
+            "and balanced performance between ideal viscosity and fast lubrication. Suitable for hot and cold driving conditions," +
+            " and gives the engine excellent protection against wear and deposits..",
         img: "products/daba-pink.png",
-        // iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-        // link: "/ui.yoom.com",
-        mwas:["Strong engine protection at high temperatures." ,
-            "Excellent viscosity stability prevents thermal breakdown." ,
-            "High oxidation resistance and extended oil life." ,
-            "Reduces friction, contributing to improved fuel economy." ,
-            "Prevents the formation of deposits and sludge." ,
-            "Suitable for long journeys and severe driving conditions."],
+
+        mwas:["Superior performance at high temperatures.",
+        "Ideal engine lubrication when starting cold.",
+        "Reduces friction and improves fuel efficiency.",
+        "High resistance to oxidation and thermal breakage.",
+        "Prevents the formation of deposits and mud inside the engine.",
+        "Longer engine life under severe operating conditions."],
 
         typical:[
-            "Viscosity Grade SAE 10W-40",
-            "Kinematic Viscosity at 40°C: 85 – 95 cSt",
-            "Kinematic Viscosity at 100°C: 13.5 – 15.0 cSt" ,
-            "Viscosity Index (VI): 150 – 165",
-            "HTHS Viscosity at 150°C: 3.5 – 3.8 mPa·s",
-            "Density at 15°C: 0.85 – 0.88 g/cm³",
-            "Pour Point: -25 to -35°C",
-            "Flash Point: 225 – 240°C" ,
-            "Base Number (TBN): 8 – 10 mg KOH/g",
-            "Sulfated Ash Content: 0.8 – 1.2 wt%"
+         "Viscosity grade SAE 10W-30",
+         "Kinematic viscosity at 40 °C 65 – 75 cSt",
+         "Kinematic viscosity at 100 °C 10.0 – 11.5 cSt",
+         "Viscosity index (VI) 140 – 160",
+         "HTHS viscosity at 150 °C 3.0 – 3.4 mPa·s",
+         "Density at 15 °C 0.85 – 0.87 g/cm³",
+         "Pour Point -25 to -35 °C",
+         "Flash point: 220 – 235 °C",
+         "Base number (TBN) 7 – 9 mg KOH/g",
+         "The percentage of sulfur ash is 0.8 - 1.0% by weight"
         ],
         standard:[
-            "API SP / SN / SM" ,
-            "ACEA A3/B4 (depending on some versions)" ,
-            "Compatible with the specifications of many European and Asian car manufacturers."
+            "API SP/SN/SM",
+            "ILSAC GF-6/GF-5",
+            "Compatible with the requirements of international companies such as Toyota, Nissan, Honda and others."
         ],
 
         aplication:[
-            "Recommended applications",
-            "Heavy duty two-stroke and four-stroke diesel engines.",
-            "Large trucks and buses.",
-            "Agricultural and construction equipment.",
-            "Suitable for working in hot climates and continuous load conditions."
+           "Multi-valve gasoline engines.",
+           "Cars with or without turbo.",
+           "Sedan cars, SUVs, pickups, and cars intended for long trips.",
+           "Suitable for daily driving and harsh operating conditions."
         ],
         Packing:[
             "1 litre",
@@ -253,7 +245,8 @@ export const products = [
             "5 litres",
             "Drums of 200 litres"
         ],
-        category:"oil"
+        short:["Gasoline" ,"Cold" , "Hot " ],
+        category:"gasoline"
 
 
     },
@@ -290,7 +283,9 @@ export const products = [
         ],
         Packing:[
         ],
-        category:"bike oil"
+        short:["Brake" , "Clutch" , "resistance"],
+
+        category:"brake"
 
     },
     {
@@ -321,7 +316,8 @@ export const products = [
         Packing:[
 
         ],
-        category:"cooler oil"
+        short:["Gasoline" , "Diesel" , "Heavy-duty"],
+        category:"dynamic"
 
 
     },
@@ -351,7 +347,8 @@ export const products = [
         Packing:[
 
         ],
-        category:"cooler oil"
+        short:["Gasoline" , "Diesel" , "Heavy-duty"],
+        category:"dynamic"
 
 
     },
@@ -391,7 +388,8 @@ export const products = [
         Packing:[
 
         ],
-        category:"diesel oil"
+        short:["Japanese " , "Korean " , "Hybrid&Eco"],
+        category:"gasoline"
 
 
     },

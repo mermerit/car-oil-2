@@ -58,12 +58,12 @@ const Contact = () => {
                         <div>
                             <p className="font-semibold mb-6 text-xl">Contact Information</p>
                             <div className="space-y-5 text-gray-300 text-md">
-                                <p className="flex items-center gap-3">
-                                    <LocationOnIcon className="text-button" /> Baghdad, Iraq
+                                <p className="flex items-center gap-2">
+                                    <LocationOnIcon className="text-button" />Malaysia, Jalan Pelepas 4/6
                                 </p>
-                                <p className="flex items-center gap-3">
-                                    <PhoneIcon className="text-button" /> +964 783 145 6481
-                                </p>
+                                {/*<p className="flex items-center gap-3">*/}
+                                {/*    <PhoneIcon className="text-button" /> +964 783 145 6481*/}
+                                {/*</p>*/}
                                 <p className="flex items-center gap-3">
                                     <EmailIcon className="text-button" /> extrab1.iq@gmail.com
                                 </p>

@@ -32,9 +32,9 @@ const Header = () => {
                     opacity-0 animate-fade-in-delay-1 tracking-wider">
                         Extra B1 Oil
                     </h1>
-                    <p className="text-lg md:text-2xl mt-6 opacity-0 animate-fade-in-delay-2">
+                    <h3 className="text-md md:text-xl mt-6 opacity-0 animate-fade-in-delay-2">
                         Premium Engine Oils for Modern & Classic Vehicles
-                    </p>
+                    </h3>
                 </div>
                 <div className="flex flex-row gap-4 opacity-0 animate-fade-in-delay-3 ">
                     <button className="px-6 py-3 bg-button text-white rounded-lg shadow-lg hover:bg-white hover:text-button
@@ -51,8 +51,8 @@ const Header = () => {
             {/* Product image in the bottom-center */}
 
             <div
-                className="absolute bottom-6 md:bottom-10 max-sm:left-1/2 max-sm:transform max-sm:-translate-x-1/2
-            md:right-60 opacity-0 animate-fade-in-delay-4
+                className="absolute bottom-6 lg:bottom-10 max-md:left-1/2 max-md:transform max-md:-translate-x-1/2
+            lg:right-60 opacity-0 animate-fade-in-delay-4
             flex flex-col items-center gap-3 z-20"
             >
                 {/* Product Image */}

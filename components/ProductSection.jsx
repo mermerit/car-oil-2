@@ -3,7 +3,8 @@ import { useState } from "react";
 import { cn } from "../src/lib/utils.js";
 import { products } from "../data/index.jsx";
 import ProductDetail from "./ProductDetail.jsx";
-import { Car, Droplet, Bike,ThermometerSnowflake, Shield } from "lucide-react";
+import { Car, Droplet, Fuel ,ThermometerSnowflake, ShieldPlus,Zap   } from "lucide-react";
+
 
 
 
@@ -19,10 +20,12 @@ export const ProductSection = () => {
 
     const categories = [
         { id: "all", label: "All", icon: Car },
-        { id: "oil", label: "Oil", icon: Droplet },
-        { id: "bike oil", label: "Bike Oil", icon: Bike },
-        { id: "cooler oil", label: "Cooler oil", icon: ThermometerSnowflake },
-        { id: "diesel oil", label: "Diesel oil", icon: Shield },
+        { id: "gasoline", label: "Gasoline Oil", icon: Fuel  },
+        { id: "diesel", label: "Diesel oil", icon: Droplet  },
+        { id: "dynamic", label: "Dynamic Oil", icon: Zap },
+        { id: "brake", label: "Brake Oil ", icon: ShieldPlus },
+
+
     ];
 
     const handleShowMore = () => {
@@ -48,7 +51,7 @@ export const ProductSection = () => {
                 </div>
 
                 {/* ✅ Category Filter */}
-                <div className="flex flex-wrap justify-center gap-3 mb-12">
+                <div className="flex flex-wrap justify-center gap-2 mb-12">
 
                     {categories.map(({ id, label, icon: Icon }) => (
                         <button
@@ -58,13 +61,13 @@ export const ProductSection = () => {
                                 setVisibleCount(9); // reset count when switching category
                             }}
                             className={cn(
-                                "flex items-center gap-2 px-5 py-2 rounded-full text-sm font-normal transition-all duration-300 capitalize",
+                                "flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold max-sm:text-[11px]  transition-all duration-300 capitalize",
                                 activeCategory === id
-                                    ? "bg-button text-white shadow-md scale-105"
+                                    ? "bg-button text-white shadow-md scale-110"
                                     : "bg-gray-200 text-gray-700 fon hover:bg-button hover:text-white"
                             )}
                         >
-                            <Icon className="w-4 h-4" />
+                            <Icon className="max-sm:w-3 max-sm:h-3 w-4 h-4" />
                             {label}
                         </button>
                     ))}
@@ -87,11 +90,21 @@ export const ProductSection = () => {
                                 />
                             </div>
 
+
+
                             {/* Info */}
                             <div className="p-6">
                                 <h1 className="text-lg font-semibold text-gray-800 mb-2">
                                     {product.title}
                                 </h1>
+                                {product.short && (
+                                        <ul className="list-disc list-inside  text-sm flex justify-center items-center gap-2 mx-auto ">
+                                            {product.short.map((feature, idx) => (
+                                                <li className="text-[10px] bg-gray-200 rounded-full px-3 py-1 mb-3 font-normal  text-gray-500 list-none " key={idx}>{feature}</li>
+                                            ))}
+                                        </ul>
+
+                                )}
                                 <h3 className=" text-[9px] text-gray-500 line-clamp-2">
                                     {product.des}
                                 </h3>
