@@ -61,7 +61,7 @@ export const ProductSection = () => {
                                 setVisibleCount(9); // reset count when switching category
                             }}
                             className={cn(
-                                "flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold max-sm:text-[11px]  transition-all duration-300 capitalize",
+                                "flex items-center gap-2 px-3 py-1 rounded-full text-sm  font-normal max-sm:text-[11px]  transition-all duration-300 capitalize",
                                 activeCategory === id
                                     ? "bg-button text-white shadow-md scale-110"
                                     : "bg-gray-200 text-gray-700 fon hover:bg-button hover:text-white"
@@ -100,7 +100,7 @@ export const ProductSection = () => {
                                 {product.short && (
                                         <ul className="list-disc list-inside  text-sm flex justify-center items-center gap-2 mx-auto ">
                                             {product.short.map((feature, idx) => (
-                                                <li className="text-[10px] bg-gray-200 rounded-full px-3 py-1 mb-3 font-normal  text-gray-500 list-none " key={idx}>{feature}</li>
+                                                <li className="text-[10px] bg-gray-200 rounded-full px-3 py-1 mb-3 font-normal  text-gray-600 list-none " key={idx}>{feature}</li>
                                             ))}
                                         </ul>
 
