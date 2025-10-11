@@ -45,7 +45,7 @@ export const products = [
             "Agricultural and construction equipment.",
             "Suitable for working in hot climates and continuous load conditions."
         ],
-        Packing:[
+        packing:[
             "1 litre",
             "4 litres",
             "5 litres",
@@ -91,7 +91,7 @@ export const products = [
          "Hybrid cars.",
          "Ideal for daily driving in busy cities and long journeys."
         ],
-        Packing:[
+        packing:[
             "1 litre",
             "4 litres",
             "5 litres",
@@ -140,7 +140,7 @@ export const products = [
             "Hybrid cars.",
             "City driving (Stop & Go) and long highway trips."
         ],
-        Packing:[
+        packing:[
             "1 litre",
             "4 litres",
             "5 litres",
@@ -188,7 +188,7 @@ export const products = [
             "Agricultural and construction equipment.",
             "Suitable for working in hot climates and continuous load conditions."
         ],
-        Packing:[
+        packing:[
             "1 litre",
             "4 litres",
             "5 litres",
@@ -239,7 +239,7 @@ export const products = [
            "Sedan cars, SUVs, pickups, and cars intended for long trips.",
            "Suitable for daily driving and harsh operating conditions."
         ],
-        Packing:[
+        packing:[
             "1 litre",
             "4 litres",
             "5 litres",
@@ -281,9 +281,8 @@ export const products = [
           "The oil should be changed periodically according to the manufacturer's recommendations or when signs of deterioration appear, such as darkening, foaming, or a \"soft\" or spongy brake pedal feel.",
           "Prevent oil from absorbing moisture after opening: Keep the tank cap tightly closed and use sealed containers."
         ],
-        Packing:[
-        ],
-        short:["Brake" , "Clutch" , "resistance"],
+
+        short:["Brake" , "Clutch" , "Resistance"],
 
         category:"brake"
 
@@ -306,16 +305,7 @@ export const products = [
         "Flash Point: A measure of resistance. High-temperature ignition",
         "Density at 15°C to determine density properties (usually given in kg/L)"
         ],
-        standard:[
 
-        ],
-
-        aplication:[
-
-        ],
-        Packing:[
-
-        ],
         short:["Gasoline" , "Diesel" , "Heavy-duty"],
         category:"dynamic"
 
@@ -337,16 +327,7 @@ export const products = [
             "Flash point: 224°C",
             "Freezing point: -27°"
         ],
-        standard:[
 
-        ],
-
-        aplication:[
-
-        ],
-        Packing:[
-
-        ],
         short:["Gasoline" , "Diesel" , "Heavy-duty"],
         category:"dynamic"
 
@@ -382,15 +363,32 @@ export const products = [
             "Ideal for Hybrid and Eco cars."
         ],
 
-        aplication:[
-
-        ],
-        Packing:[
-
-        ],
-        short:["Japanese " , "Korean " , "Hybrid&Eco"],
+        short:["Hybrid&Eco","Japanese" , "Korean"  ],
         category:"gasoline"
 
+
+    },
+    {
+        id: 10,
+        title:"Extra B-One 0W-1G",
+        des:"Extra P1 0W-30 Malaysian Oil for modern turbo engines",
+        img:"products/daba-orange.png",
+
+        develop: "Development Stages of Extra P1 0W-30 for Modern Turbo Engines :",
+
+
+        stageone:["Engineers analyze the specific needs of modern turbocharged engines that operate under high pressure and temperature.",
+        "Selection of fully synthetic base oils (Group IV) to ensure stable viscosity under all temperature conditions.",
+        "Use of advanced American additive technology to enhance anti-wear, anti-foam, and oxidation resistance performance."],
+
+        stagetwo:["Precise blending of base oils and additives using advanced laboratory technology.",
+        "Testing low-temperature viscosity (0W) to ensure smooth engine start-up in cold conditions." ,
+        "Testing high-temperature viscosity (30) to maintain protection and stability under extreme heat and heavy load conditions."],
+
+        stagethree:["Conducted real-world testing on modern turbo engines in vehicles such as Toyota, Hyundai, Nissan, an"],
+
+        short:["Turbo","Heavy-Load" , "Anti-Wear"  ],
+        category:"gasoline"
 
     },
 

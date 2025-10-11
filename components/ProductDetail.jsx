@@ -107,6 +107,9 @@ export default function ProductDetail({ product, onClose }) {
                                 <h3 className="text-sm sm:text-base leading-relaxed">
                                     {product.des}
                                 </h3>
+
+
+
                             </div>
 
                             {product.mwas && (
@@ -161,29 +164,81 @@ export default function ProductDetail({ product, onClose }) {
                                 </div>
                             )}
 
-                            {product.Packing && (
+                            {product.packing && (
                                 <div>
                                     <h3 className="text-xl sm:text-2xl font-semibold mb-2 bg-gray-800 rounded-full py-2">
                                         Packing
                                     </h3>
                                     <ul className="list-disc list-inside space-y-1 text-sm">
-                                        {product.Packing.map((pack, idx) => (
+                                        {product.packing.map((pack, idx) => (
                                             <li key={idx}>{pack}</li>
                                         ))}
                                     </ul>
                                 </div>
                             )}
+                            {product.stageone && (
+                                <div>
+                                    <h3 className="text-sm sm:text-md text-button mb-2   leading-relaxed">
+                                        {product.develop}
+                                    </h3>
+                                    <h3 className="text-sm sm:text-2xl font-semibold mb-2 bg-gray-800 rounded-full py-2">
+                                        Stage 1: Research and Development
+
+                                    </h3>
+                                    <ul className="list-disc list-inside space-y-4 text-sm">
+                                        {product.stageone.map((pack, idx) => (
+                                            <li key={idx}>{pack}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+                            {product.stagetwo && (
+                                <div>
+
+                                    <h3 className="text-sm sm:text-2xl font-semibold mb-2 bg-gray-800 rounded-full py-2">
+                                        Stage 2: Chemical Formulation and Laboratory Testing
+
+                                    </h3>
+                                    <ul className="list-disc list-inside space-y-4 text-sm">
+                                        {product.stagetwo.map((pack, idx) => (
+                                            <li key={idx}>{pack}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+
+                            {product.stagethree && (
+                                <div>
+
+                                    <h3 className="text-sm sm:text-2xl font-semibold mb-2 bg-gray-800 rounded-full py-2">
+                                        Stage 3: Field Performance Testing
+
+                                    </h3>
+                                    <ul className="list-disc list-inside space-y-4 text-sm">
+                                        {product.stagethree.map((pack, idx) => (
+                                            <li key={idx}>{pack}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+
+
+
+
                         </div>
 
                         {/* Footer */}
-                        <div className="p-4 border-t border-gray-200 bg-gray-50 text-center">
-                            <button
-                                onClick={sendViaWhatsApp}
-                                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 rounded-full shadow-md transition transform hover:scale-105 text-sm font-medium text-white"
-                            >
-                                <WhatsAppIcon style={{ fontSize: "18px" }} />
-                                Contact via WhatsApp
-                            </button>
+                        {/*<div className="p-4 border-t border-gray-200 bg-gray-50 text-center">*/}
+                        {/*    <button*/}
+                        {/*        onClick={sendViaWhatsApp}*/}
+                        {/*        className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 rounded-full shadow-md transition transform hover:scale-105 text-sm font-medium text-white"*/}
+                        {/*    >*/}
+                        {/*        <WhatsAppIcon style={{ fontSize: "18px" }} />*/}
+                        {/*        Contact via WhatsApp*/}
+                        {/*    </button>*/}
+                        {/*</div>*/}
+                        <div className="bg-gray-100 w-full h-14">
+
                         </div>
                     </motion.div>
                 </motion.div>

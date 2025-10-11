@@ -31,7 +31,7 @@ const About = () => {
                         About <span className="text-button">Extra B1</span>
                     </h2>
                     <div className="w-20 h-1 bg-button mx-auto rounded-full mb-6"></div>
-                    <p className="max-w-2xl mx-auto text-lg text-gray-400 leading-relaxed">
+                    <p className="max-w-2xl mx-auto text-lg text-gray-600 leading-relaxed">
                         We specialize in providing high-quality car oils that protect your engine
                         and deliver outstanding performance for every drive.
                     </p>
@@ -65,7 +65,7 @@ const About = () => {
                         </div>
 
                         {/* Paragraph */}
-                        <p className="text-gray-400 leading-relaxed mb-10 max-w-xl">
+                        <p className="text-gray-600 leading-relaxed mb-10 max-w-xl">
                             At Extra B1, we prioritize our customers’ trust. Our mission is to
                             provide premium engine oils that meet global standards. Each of our
                             products is carefully crafted to ensure maximum protection, power, and
