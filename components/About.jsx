@@ -26,11 +26,12 @@ const About = () => {
             {/* Content */}
             <div className="relative z-10 max-w-7xl w-full">
                 {/* Title */}
-                <div className="text-center mb-16">
+                <div className="text-center max-sm:mb-6 mb-16">
                     <h2 className="text-4xl sm:text-5xl text-black font-bold mb-4">
                         About <span className="text-button">Extra B1</span>
                     </h2>
-                    <div className="w-20 h-1 bg-button mx-auto rounded-full mb-6"></div>
+                    <div className="w-20 h-1 bg-button mx-auto rounded-full mb-4"></div>
+
                     <p className="max-w-2xl mx-auto text-lg text-gray-600 leading-relaxed">
                         We specialize in providing high-quality car oils that protect your engine
                         and deliver outstanding performance for every drive.
@@ -38,7 +39,7 @@ const About = () => {
                 </div>
 
                 {/* Layout */}
-                <div className="flex flex-col lg:flex-row items-center gap-16">
+                <div className="flex flex-col lg:flex-row items-center gap-8">
                     {/* Image */}
                     <div className="flex-1 flex-row justify-center">
                         <img

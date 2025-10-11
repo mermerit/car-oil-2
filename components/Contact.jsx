@@ -71,14 +71,14 @@ const Contact = () => {
                         </div>
 
                         <div className="flex gap-6 mt-10 text-3xl">
-                            <a
-                                href="https://wa.me/9647831456481"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:text-green-500 transition-transform transform hover:scale-110"
-                            >
-                                <WhatsAppIcon fontSize="inherit" />
-                            </a>
+                            {/*<a*/}
+                            {/*    href="https://wa.me/9647831456481"*/}
+                            {/*    target="_blank"*/}
+                            {/*    rel="noopener noreferrer"*/}
+                            {/*    className="hover:text-green-500 transition-transform transform hover:scale-110"*/}
+                            {/*>*/}
+                            {/*    <WhatsAppIcon fontSize="inherit" />*/}
+                            {/*</a>*/}
                             <a
                                 href="https://www.facebook.com/share/17dCkLaYJQ/"
                                 target="_blank"
