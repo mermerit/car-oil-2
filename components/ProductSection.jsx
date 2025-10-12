@@ -33,7 +33,7 @@ export const ProductSection = () => {
     };
 
     return (
-        <section className="py-24 px-4 relative bg-gradient-to-b from-gray-50 to-gray-100">
+        <section className="py-20 px-4 relative bg-gradient-to-b from-gray-50 to-gray-100">
             <div className="container mx-auto max-w-6xl">
                 {/* Section Title */}
                 <div className="text-center mb-16">
