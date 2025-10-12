@@ -52,7 +52,7 @@ const Header = () => {
 
             <div
                 className="absolute bottom-6 lg:bottom-10 max-md:left-1/2 max-md:transform max-md:-translate-x-1/2
-            lg:right-60 opacity-0 animate-fade-in-delay-4
+            lg:right-40 opacity-0 animate-fade-in-delay-4
             flex flex-col items-center gap-3 z-20"
             >
                 {/* Product Image */}
