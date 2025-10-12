@@ -103,7 +103,7 @@ export default function ProductDetail({ product, onClose }) {
                         </div>
 
                         {/* Buttons */}
-                        <div className="flex flex-wrap justify-center gap-2 px-3 py-2 bg-gray-300">
+                        <div className="flex flex-wrap justify-center gap-2 px-3 py-2 bg-gray-200">
                             {sections.map((section) => (
                                 <button
                                     key={section.key}
@@ -111,7 +111,7 @@ export default function ProductDetail({ product, onClose }) {
                                     className={`px-3 py-1.5 text-xs sm:text-md rounded-full font-medium transition-all duration-200 ${
                                         activeSection === section.key
                                             ? "bg-button text-white shadow-md"
-                                            : " text-gray-700 hover:bg-gray-100"
+                                            : " text-gray-600 hover:bg-gray-100"
                                     }`}
                                 >
                                     {section.label}
@@ -120,7 +120,7 @@ export default function ProductDetail({ product, onClose }) {
                         </div>
 
                         {/* Content Area (no inner scroll) */}
-                        <div className="bg-gray-100 p-6 text-gray-600 leading-relaxed text-sm sm:text-md">
+                        <div className="bg-gray-100 p-6 text-gray-700 leading-relaxed text-sm sm:text-md">
                             <AnimatePresence mode="wait">
                                 {sections
                                     .filter((s) => s.key === activeSection)
@@ -137,7 +137,7 @@ export default function ProductDetail({ product, onClose }) {
                                             </h3>
 
                                             {Array.isArray(section.content) ? (
-                                                <ul className=" space-y-1 text-gray-600 list-disc list-inside ">
+                                                <ul className=" space-y-1 text-gray-700 list-disc list-inside ">
                                                     {section.content.map((item, idx) => (
                                                         <li key={idx}>{item}</li>
                                                     ))}
