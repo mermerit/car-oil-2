@@ -1,79 +1,91 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Navbar from "./Navbar.jsx";
 
 const Header = () => {
-    // Product images array
-    const productImages = [
-        "/products/zait-faraml.png",
-        "/products/daba-shin.png",
-        "/products/daba-sawz.png",
-        "/products/tank-30.png",
+    const images = [
+        "/background/post-zard.png",
+        "/background/post-shin-tox.png",
+        "/background/post.png",
     ];
 
-    // State for current image index
-    const [currentImage, setCurrentImage] = useState(0);
+    const [current, setCurrent] = useState(0);
+    const timeoutRef = useRef(null);
+
+    // Auto slide every 8 seconds
+    useEffect(() => {
+        const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
+
+        // clear existing interval before creating new one
+        clearInterval(timeoutRef.current);
+        timeoutRef.current = setInterval(nextSlide, 8000);
+
+        return () => clearInterval(timeoutRef.current);
+    }, [images.length]);
+
+    // Manual controls
+    const goToPrev = () =>
+        setCurrent((prev) => (prev - 1 + images.length) % images.length);
+    const goToNext = () => setCurrent((prev) => (prev + 1) % images.length);
+
+    // Swipe handling (for mobile)
+    const touchStartX = useRef(null);
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+    const handleTouchEnd = (e) => {
+        if (touchStartX.current === null) return;
+        const diff = e.changedTouches[0].clientX - touchStartX.current;
+        if (diff > 50) goToPrev();
+        else if (diff < -50) goToNext();
+        touchStartX.current = null;
+    };
 
     return (
         <div
-            className="relative min-h-screen mb-4 bg-cover bg-center flex flex-col items-center justify-center w-full overflow-hidden"
-            style={{ backgroundImage: "url('background/tank-700.jpg')" }} // fixed background
             id="Header"
+            className="relative w-full flex flex-col items-center justify-center overflow-hidden max-md:pt-25 bg-white"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
         >
-            {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/50"></div>
-
             {/* Navbar */}
             <Navbar />
 
-            {/* Content */}
-            <div className=" max-sm:mb-20  z-10 container mx-auto flex flex-col items-center justify-center text-center gap-12 py-16">
-                <div className="flex flex-col items-center justify-center text-primary">
-                    <h1 className="text-5xl sm:text-6xl md:text-[82px] font-semibold max-w-3xl
-                    opacity-0 animate-fade-in-delay-1 tracking-wider">
-                        Extra B1 Oil
-                    </h1>
-                    <h3 className="text-md md:text-xl mt-6 opacity-0 animate-fade-in-delay-2">
-                        Premium Engine Oils for Modern & Classic Vehicles
-                    </h3>
-                </div>
-                <div className="flex flex-row gap-4 opacity-0 animate-fade-in-delay-3 ">
-                    <button className="px-6 py-3 bg-button text-white rounded-lg shadow-lg hover:bg-white hover:text-button
-                         transition duration-400">
-                        <a href="#Products">Products</a>
-                    </button> <button className="px-6 py-3 border border-button text-button rounded-lg shadow-lg
-                        hover:text-white hover:border-white transition duration-400">
-                    <a href="#Contact">Contact</a>
-                </button>
-                </div>
-            </div>
+            {/* Background Image Slider */}
+            <div className="relative w-full flex justify-center items-center">
+                <img
+                    src={images[current]}
+                    alt={`Header Background ${current + 1}`}
+                    className="w-full h-auto object-cover max-h-[80vh]"
+                />
 
-
-            {/* Product image in the bottom-center */}
-
-            <div
-                className="absolute bottom-6 lg:bottom-10 max-md:left-1/2 max-md:transform max-md:-translate-x-1/2
-            lg:right-40 opacity-0 animate-fade-in-delay-4
-            flex flex-col items-center gap-3 z-20"
-            >
-                {/* Product Image */}
-                <a
-                    href="#Products"
-                    onClick={(e) => {
-                        e.preventDefault(); // prevent jump to #Products when just cycling images
-                        setCurrentImage((prev) =>
-                            prev === productImages.length - 1 ? 0 : prev + 1
-                        );
-                    }}
-                    className="cursor-pointer"
+                {/* Arrows (visible on large screens) */}
+                <button
+                    onClick={goToPrev}
+                    className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full hover:bg-black/70"
                 >
-                    <img
-                        src={productImages[currentImage]}
-                        alt={`Product ${currentImage + 1}`}
-                        className="w-40 md:w-45 object-contain"
-                    />
-                </a>
-            </div>
+                    <ChevronLeft size={24} />
+                </button>
+                <button
+                    onClick={goToNext}
+                    className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full hover:bg-black/70"
+                >
+                    <ChevronRight size={24} />
+                </button>
 
+                {/* Dots Indicator */}
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
+                    {images.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrent(index)}
+                            className={`w-2 h-2 rounded-full transition-all ${
+                                current === index ? "bg-blue-600 scale-110" : "bg-gray-400"
+                            }`}
+                        />
+                    ))}
+                </div>
+            </div>
         </div>
     );
 };

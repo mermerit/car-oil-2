@@ -11,7 +11,7 @@ import { Car, Droplet, Fuel ,ThermometerSnowflake, ShieldPlus,Zap   } from "luci
 export const ProductSection = () => {
     const [activeCategory, setActiveCategory] = useState("all");
     const [selectedProduct, setSelectedProduct] = useState(null);
-    const [visibleCount, setVisibleCount] = useState(6); // 👈 show 3 rows initially (3x3 grid)
+    const [visibleCount, setVisibleCount] = useState(9); // 👈 show 3 rows initially (3x3 grid)
 
     const filteredProducts = products.filter(
         (product) =>
@@ -29,7 +29,7 @@ export const ProductSection = () => {
     ];
 
     const handleShowMore = () => {
-        setVisibleCount((prev) => prev + 6); // 👈 add 3 more rows (3x3 = 9 items)
+        setVisibleCount((prev) => prev + 9); // 👈 add 3 more rows (3x3 = 9 items)
     };
 
     return (
