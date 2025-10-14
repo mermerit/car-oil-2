@@ -4,9 +4,10 @@ import Navbar from "./Navbar.jsx";
 
 const Header = () => {
     const images = [
-        "/background/post-zard.png",
         "/background/post-shin-tox.png",
+        "/background/post-zard.png",
         "/background/post.png",
+
     ];
 
     const [current, setCurrent] = useState(0);
@@ -44,7 +45,7 @@ const Header = () => {
     return (
         <div
             id="Header"
-            className="relative w-full flex flex-col items-center justify-center overflow-hidden max-md:pt-25 bg-white"
+            className="relative w-full flex flex-col items-center justify-center overflow-hidden max-md:pt-19  pt-15 bg-gray-50    "
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
         >
@@ -86,6 +87,9 @@ const Header = () => {
                     ))}
                 </div>
             </div>
+
+
+
         </div>
     );
 };
