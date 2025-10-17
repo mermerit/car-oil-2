@@ -45,7 +45,7 @@ const Header = () => {
     return (
         <div
             id="Header"
-            className="relative w-full flex flex-col items-center justify-center overflow-hidden max-md:pt-19  pt-15 bg-gray-50    "
+            className="relative w-full flex flex-col items-center justify-center overflow-hidden max-md:pt-19  py-15 bg-gray-50 lg:h-screen   "
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
         >
@@ -57,7 +57,7 @@ const Header = () => {
                 <img
                     src={images[current]}
                     alt={`Header Background ${current + 1}`}
-                    className="w-full h-auto object-cover max-h-[80vh]"
+                    className="w-full h-auto object-cover max-h-[100vh]"
                 />
 
                 {/* Arrows (visible on large screens) */}

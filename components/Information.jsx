@@ -1,4 +1,5 @@
 import React from 'react'
+import TapeSection from "./TapeSection.jsx";
 
 const Information = () => {
     return (
@@ -31,6 +32,7 @@ const Information = () => {
                     Competitive prices compared to other international oil brands.
 
                 </p>
+
             </div>
 
         </section>

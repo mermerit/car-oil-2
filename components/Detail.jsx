@@ -1,9 +1,10 @@
 import React from "react";
+import TapeSection from "../components/TapeSection.jsx";
 
 const Detail = () => {
     return (
-        <section className="relative bg-gray-50 py-20 px-6 md:px-16 lg:px-32">
-            <div className="max-w-6xl mx-auto">
+        <section className="relative bg-gray-50 py-20 md:px-16 lg:px-32">
+            <div className="max-w-6xl mx-auto px-6">
                 {/* Title */}
                 <h2 className="text-2xl sm:text-5xl font-bold text-center mb-12">
                     Distribution of{" "}
@@ -50,9 +51,10 @@ const Detail = () => {
                             <h3 className="text-xl font-semibold text-button mb-3">
                                 {item.region}
                             </h3>
-                            <p className="text-gray-100">{item.countries}</p>
+                            <h3 className="text-gray-300 text-xs">{item.countries}</h3>
                         </div>
                     ))}
+                    <TapeSection />
                 </div>
 
                 {/* Advantages */}
@@ -75,7 +77,10 @@ const Detail = () => {
                         </p>
                     </div>
                 </div>
+
             </div>
+
+
         </section>
     );
 };

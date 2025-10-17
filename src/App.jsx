@@ -7,6 +7,8 @@ import Information from "../components/Information.jsx";
 import Detail from "../components/Detail.jsx";
 import Contact from "../components/Contact.jsx";
 import ProductDetail from "../components/ProductDetail.jsx";
+import QRSticker from "../components/QRSticker.jsx";
+
 
 function App() {
     return (
@@ -20,11 +22,13 @@ function App() {
                         path="/"
                         element={
                             <>
+
                                 <ProductSection />
                                 <About />
                                 <Information />
                                 <Detail />
                                 <Contact />
+
                             </>
                         }
                     />
@@ -34,5 +38,4 @@ function App() {
         </Router>
     );
 }
-
 export default App;

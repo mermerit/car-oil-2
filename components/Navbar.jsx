@@ -29,6 +29,7 @@ const Navbar = () => {
 
                 </h1>
 
+
                 {/* Mobile Menu Button */}
                 <div className="md:hidden cursor-pointer">
                     {showMobileMenu ? (

@@ -120,7 +120,7 @@ export default function ProductDetail({ product, onClose }) {
                         </div>
 
                         {/* Content Area (no inner scroll) */}
-                        <div className="bg-gray-100 p-6 text-gray-700 leading-relaxed text-sm sm:text-md">
+                        <div className="bg-gray-100 p-6 text-gray-500 leading-relaxed text-xs sm:text-md">
                             <AnimatePresence mode="wait">
                                 {sections
                                     .filter((s) => s.key === activeSection)
@@ -137,7 +137,7 @@ export default function ProductDetail({ product, onClose }) {
                                             </h3>
 
                                             {Array.isArray(section.content) ? (
-                                                <ul className=" space-y-1 text-gray-700 list-disc list-inside ">
+                                                <ul className=" space-y-1 text-gray-600 list-disc list-inside ">
                                                     {section.content.map((item, idx) => (
                                                         <li key={idx}>{item}</li>
                                                     ))}
