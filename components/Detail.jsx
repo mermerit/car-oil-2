@@ -54,7 +54,7 @@ const Detail = () => {
                             <h3 className="text-gray-300 text-xs">{item.countries}</h3>
                         </div>
                     ))}
-                    <TapeSection />
+                    
                 </div>
 
                 {/* Advantages */}
