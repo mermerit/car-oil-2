@@ -1,7 +1,7 @@
 export const products = [
     {
         id: 1,
-        title: " Extra B-One HD50 ",
+        title: " Extra B-One HD-50 ",
         des: "Extra B-One HD50 Malaysia is a monograde diesel engine oil designed to provide " +
             "strong protection and reliable performance under operating conditions. Suitable for " +
             "breakaway situations and various commercial vehicles required by SAE 50 viscosity.",
