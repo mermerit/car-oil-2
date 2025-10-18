@@ -86,7 +86,7 @@ const Header = () => {
                         key={index}
                         onClick={() => setCurrent(index)}
                         className={`w-2 h-2 rounded-full transition-all ${
-                            current === index ? "bg-blue-600 scale-110" : "bg-gray-400"
+                            current === index ? "bg-button scale-110" : "bg-gray-400"
                         }`}
                     />
                 ))}
