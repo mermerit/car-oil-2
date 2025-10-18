@@ -1,5 +1,4 @@
 import React from 'react'
-import TapeSection from "./TapeSection.jsx";
 
 const Information = () => {
     return (

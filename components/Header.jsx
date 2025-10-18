@@ -4,7 +4,7 @@ import Navbar from "./Navbar.jsx";
 
 const Header = () => {
     const images = [
-        "/background/header.png",
+        "/background/header-1.png",
         "/background/post.png",
         "/background/post-mor.png",
         "/background/post-zard.png",
@@ -47,10 +47,14 @@ const Header = () => {
     return (
         <div
             id="Header"
-            className="relative w-full flex flex-col items-center justify-center overflow-hidden max-md:pt-19  py-15 bg-gray-50 lg:h-screen   "
+            className="relative w-full flex flex-col items-center justify-center overflow-hidden md:py-19 py-15 bg-gray-50  md:h-screen  "
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
+
         >
+
+
+
             {/* Navbar */}
             <Navbar />
 

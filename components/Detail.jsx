@@ -1,5 +1,4 @@
 import React from "react";
-import TapeSection from "../components/TapeSection.jsx";
 
 const Detail = () => {
     return (
