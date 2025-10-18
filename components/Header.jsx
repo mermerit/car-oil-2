@@ -4,9 +4,11 @@ import Navbar from "./Navbar.jsx";
 
 const Header = () => {
     const images = [
-        "/background/post-shin-tox.png",
-        "/background/post-zard.png",
+        "/background/header.png",
         "/background/post.png",
+        "/background/post-mor.png",
+        "/background/post-zard.png",
+
 
     ];
 
