@@ -8,8 +8,6 @@ const Header = () => {
         "/background/post.png",
         "/background/post-mor.png",
         "/background/post-zard.png",
-
-
     ];
 
     const [current, setCurrent] = useState(0);
@@ -18,11 +16,8 @@ const Header = () => {
     // Auto slide every 8 seconds
     useEffect(() => {
         const nextSlide = () => setCurrent((prev) => (prev + 1) % images.length);
-
-        // clear existing interval before creating new one
         clearInterval(timeoutRef.current);
         timeoutRef.current = setInterval(nextSlide, 8000);
-
         return () => clearInterval(timeoutRef.current);
     }, [images.length]);
 
@@ -47,14 +42,10 @@ const Header = () => {
     return (
         <div
             id="Header"
-            className="relative w-full flex flex-col items-center justify-center overflow-hidden md:py-19 py-15 bg-gray-50  md:h-screen  "
+            className="relative w-full flex flex-col items-center justify-center overflow-hidden md:py-19 py-15 bg-gray-50 md:h-screen"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
-
         >
-
-
-
             {/* Navbar */}
             <Navbar />
 
@@ -80,22 +71,26 @@ const Header = () => {
                     <ChevronRight size={24} />
                 </button>
 
-                {/* Dots Indicator */}
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
-                    {images.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setCurrent(index)}
-                            className={`w-2 h-2 rounded-full transition-all ${
-                                current === index ? "bg-blue-600 scale-110" : "bg-gray-400"
-                            }`}
-                        />
-                    ))}
-                </div>
+                {/* ✅ Discover Button - only on first image */}
+                {current === 0 && (
+                    <div className="absolute bottom-4 md:left-100 left-1/2 -translate-x-1/2 flex text-xs md:text-lg px-5 py-2 bg-white rounded-full text-button  cursor-pointer">
+                        <a href="#Products">Discover More</a>
+                    </div>
+                )}
             </div>
 
-
-
+            {/* Dots Indicator */}
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex space-x-2">
+                {images.map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setCurrent(index)}
+                        className={`w-2 h-2 rounded-full transition-all ${
+                            current === index ? "bg-blue-600 scale-110" : "bg-gray-400"
+                        }`}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
