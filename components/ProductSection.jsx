@@ -1,9 +1,9 @@
-import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { cn } from "../src/lib/utils.js";
 import { products } from "../data/index.jsx";
 import ProductDetail from "./ProductDetail.jsx";
-import { Car, Droplet, Fuel ,ThermometerSnowflake, ShieldPlus,Zap   } from "lucide-react";
+import { Car, Droplet, Fuel, ShieldPlus, Zap } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 
 
@@ -58,7 +58,7 @@ export const ProductSection = () => {
                             key={id}
                             onClick={() => {
                                 setActiveCategory(id);
-                                setVisibleCount(6); // reset count when switching category
+                                setVisibleCount(9); // reset to initial count when switching category
                             }}
                             className={cn(
                                 "flex items-center gap-2 px-3 py-1 rounded-full text-sm  font-normal max-sm:text-[11px]  " +

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Detail = () => {
     return (
         <section className="relative bg-gray-50 py-20 md:px-16 lg:px-32">

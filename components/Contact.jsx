@@ -1,11 +1,9 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EmailIcon from "@mui/icons-material/Email";
-import PhoneIcon from "@mui/icons-material/Phone";
 
 const Contact = () => {
     const form = useRef();
@@ -87,12 +85,13 @@ const Contact = () => {
                             >
                                 <FacebookIcon fontSize="inherit" />
                             </a>
-                            <a
+                            {/* Instagram link to be added when available */}
+                            {/*<a
                                 href="#"
                                 className="hover:text-pink-500 transition-transform transform hover:scale-110"
                             >
                                 <InstagramIcon fontSize="inherit" />
-                            </a>
+                            </a>*/}
                         </div>
                     </div>
 

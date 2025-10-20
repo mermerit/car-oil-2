@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 export default function ProductDetail({ product, onClose }) {
-    const phoneNumber = "9647831456481";
     const [activeSection, setActiveSection] = useState("description");
 
     // Lock body scroll when modal is open
@@ -35,17 +35,6 @@ export default function ProductDetail({ product, onClose }) {
 
     if (!product) return null;
 
-    const sendViaWhatsApp = () => {
-        const message = `Hello, I want to know more about this product:
-
-📌 Name: ${product.title}
-📝 Description: ${product.des}`;
-        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-            message
-        )}`;
-        window.open(url, "_blank");
-    };
-
     // Sections dynamically defined
     const sections = [
         { key: "description", label: "Description", content: product.des },
@@ -69,11 +58,13 @@ export default function ProductDetail({ product, onClose }) {
                     exit={{ opacity: 0 }}
                 >
                     {/* Background click to close */}
-                    <div className="absolute inset-0" onClick={onClose}></div>
+                    <div className="absolute inset-0" onClick={onClose}>
+
+                    </div>
 
                     {/* Scrollable Modal */}
                     <motion.div
-                        className="relative bg-gray-800 rounded-2xl shadow-2xl w-full max-w-3xl h-[90vh] overflow-y-auto text-gray-100 flex flex-col"
+                        className="relative  bg-gray-100 rounded-2xl shadow-2xl w-full max-w-3xl h-[90vh] overflow-y-auto text-gray-100 flex flex-col"
                         initial={{ scale: 0.9, opacity: 0, y: 30 }}
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         exit={{ scale: 0.9, opacity: 0, y: 30 }}
@@ -87,7 +78,7 @@ export default function ProductDetail({ product, onClose }) {
                             </h2>
                             <button
                                 onClick={onClose}
-                                className="text-gray-400 hover:text-red-400 transition"
+                                className={` hover:text-red-400 ${onClose ? "text-gray-400" : "text-red-600"}`}
                             >
                                 <X className="w-6 h-6" />
                             </button>

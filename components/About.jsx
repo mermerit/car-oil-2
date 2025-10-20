@@ -1,6 +1,4 @@
-import React from "react";
 import StarIcon from "@mui/icons-material/Star";
-import PeopleIcon from "@mui/icons-material/People";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import OilBarrelIcon from '@mui/icons-material/OilBarrel';
@@ -17,12 +15,7 @@ const About = () => {
             id="About"
             className="relative bg-gray-100 flex flex-col items-center justify-center
              text-white py-24 px-6 md:px-16 lg:px-32 w-full"
-
-
         >
-            {/* Overlay */}
-            <div className="absolute inset-0 "></div>
-
             {/* Content */}
             <div className="relative z-10 max-w-7xl w-full">
                 {/* Title */}

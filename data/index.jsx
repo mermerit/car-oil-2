@@ -12,7 +12,7 @@ export const products = [
 
 "Excellent viscosity stability under heavy loads and high temperatures.",
 
-"Strong resistance to oxidation and sediment formation.\n",
+"Strong resistance to oxidation and sediment formation.",
 
 "Keeps the engine clean and extends its operating life.",
 
@@ -335,9 +335,8 @@ export const products = [
     },
     {
         id: 9,
-        title:"Extra B-One 0W-1G",
-        des:"Malaysian Extra P1 0W-16 oil is one of the ads specifically for modern Japanese and Korean engines that are based on fuel economy (fuel economy) technology and need very low viscosity oil.\n" +
-            "Below is an explanation of its specifications and the meaning of its SQ rating",
+        title:"Extra B-One 0W-16",
+        des:"Malaysian Extra B1 0W-16 oil is specifically designed for modern Japanese and Korean engines that are based on fuel economy technology and require very low viscosity oil. Below is an explanation of its specifications and the meaning of its SQ rating.",
         img:"products/zait-gas.png",
         mwas:["The number 0W means that the oil has excellent operability at very low temperatures (it is easier to start the engine in the cold).",
         "The number 16 indicates that the oil is very light at high temperatures, which reduces frictional resistance inside the engine and saves fuel consumption.",
@@ -370,11 +369,11 @@ export const products = [
     },
     {
         id: 10,
-        title:"Extra B-One 0W-1G",
-        des:"Extra P1 0W-30 Malaysian Oil for modern turbo engines",
+        title:"Extra B-One 0W-30",
+        des:"Extra B1 0W-30 Malaysian Oil for modern turbo engines",
         img:"products/daba-orange.png",
 
-        develop: "Development Stages of Extra P1 0W-30 for Modern Turbo Engines :",
+        develop: "Development Stages of Extra B1 0W-30 for Modern Turbo Engines:",
 
 
         stageone:["Engineers analyze the specific needs of modern turbocharged engines that operate under high pressure and temperature.",
@@ -385,7 +384,7 @@ export const products = [
         "Testing low-temperature viscosity (0W) to ensure smooth engine start-up in cold conditions." ,
         "Testing high-temperature viscosity (30) to maintain protection and stability under extreme heat and heavy load conditions."],
 
-        stagethree:["Conducted real-world testing on modern turbo engines in vehicles such as Toyota, Hyundai, Nissan, an"],
+        stagethree:["Conducted real-world testing on modern turbo engines in vehicles such as Toyota, Hyundai, Nissan, and other manufacturers to ensure optimal performance and protection."],
 
         short:["Turbo","Heavy-Load" , "Anti-Wear"  ],
         category:"gasoline"

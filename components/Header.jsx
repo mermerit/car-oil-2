@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Navbar from "./Navbar.jsx";
 
 const Header = () => {
     const images = [
@@ -46,9 +45,6 @@ const Header = () => {
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
         >
-            {/* Navbar */}
-            <Navbar />
-
             {/* Background Image Slider */}
             <div className="relative w-full flex justify-center items-center">
                 <img
@@ -75,6 +71,17 @@ const Header = () => {
                 {current === 0 && (
                     <div className="absolute bottom-4 md:left-100 left-1/2 -translate-x-1/2 flex text-xs md:text-lg px-5 py-2 bg-white rounded-full text-button  cursor-pointer">
                         <a href="#Products">Discover More</a>
+                    </div>
+                )}
+                {current === 1 && (
+                    <div className="absolute bottom-6 left-0 right-0 flex items-center font-bold justify-around px-22 md:px-16">
+                        <div className="flex text-[11px] md:text-lg px-3 py-2 bg-white rounded-full text-button cursor-pointer">
+                            <a href="#Products">Discover More</a>
+                        </div>
+                        <div className="flex text-[11px] md:text-lg px-5 py-2 font-bold border-2
+                        rounded-full text-white  cursor-pointer">
+                            <a href="#Contact">Contact Us</a>
+                        </div>
                     </div>
                 )}
             </div>
