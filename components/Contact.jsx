@@ -1,9 +1,10 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import EmailIcon from "@mui/icons-material/Email";
+
 
 const Contact = () => {
     const form = useRef();

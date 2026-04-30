@@ -75,6 +75,38 @@ const About = () => {
                         </a>
                     </div>
                 </div>
+                {/* Certificates */}
+                <div className="w-full mt-40 flex flex-col items-center  ">
+                    <h3 className="text-2xl font-semibold text-black mb-4">
+                        Extra B-one Certifications
+                    </h3>
+
+                    <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
+                        <img
+                            src="/background/photo_2026-05-01_00-33-17.jpg"
+                            alt="Certificate 1"
+                            className="w-48 h-auto object-contain bg-white p-2 rounded-lg shadow-md"
+                        />
+                        <img
+                            src="/background/photo_2026-05-01_00-33-10.jpg"
+                            alt="Certificate 1"
+                            className="w-48 h-auto object-contain bg-white p-2 rounded-lg shadow-md"
+                        />
+                        <img
+                            src="/background/photo_2026-05-01_00-33-14.jpg"
+                            alt="Certificate 1"
+                            className="w-48 h-auto object-contain bg-white p-2 rounded-lg shadow-md"
+                        />
+
+                        <img
+                            src="/background/photo_2026-05-01_00-33-16.jpg"
+                            alt="Certificate 2"
+                            className="w-48 h-auto object-contain bg-white p-2 rounded-lg shadow-md"
+                        />
+
+                        {/* Add more images here if needed */}
+                    </div>
+                </div>
             </div>
         </section>
     );

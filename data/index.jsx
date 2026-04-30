@@ -390,6 +390,119 @@ export const products = [
         category:"gasoline"
 
     },
+    {
+        id: 11,
+        title:"Extra B-One 0W-20",
+        // des:"Malaysian Extra B1 0W-16 oil is specifically designed for modern Japanese and Korean engines that are based on fuel economy technology and require very low viscosity oil. Below is an explanation of its specifications and the meaning of its SQ rating.",
+        img:"products/0w-20.jpg",
+        mwas:["Light at cold starts\n" +
+        "Maintains its consistency at high temperatures\n" +
+        "Second: The meaning of API SQ\n" +
+        "API = American Petroleum Institute\n" +
+        "SQ = Latest classification (higher than SP and SN)\n" +
+        "🔧 This classification means that the oil is:\n" +
+        "Suitable for modern gasoline engines\n" +
+        "Provides more advanced protection than older classifications\n" +
+        "Compatible with turbocharged and direct injection engines\n" +
+        "📌 It is backward compatible (meaning it can replace SP or SN)"],
+        aplication:[
+           "When should you use it?\n" +
+           "\n" +
+           "Suitable for:\n" +
+           "\n" +
+           "Modern cars (especially from 2015 onwards)\n" +
+           "Gasoline engines (normal or turbo)\n" +
+           "Cars whose manuals specify:\n" +
+           "0W-20\n" +
+           "API SP or SQ"
+        ],
+
+        typical:[
+           "Features of 5W-30 API SQ Oil\n" +
+           "Oils with this rating are characterized by:\n" +
+           "\n" +
+           "🛡️ High engine protection against wear\n" +
+           "🧼 Engine cleaning from deposits\n" +
+           "⛽️ Reduced fuel consumption\n" +
+           "❄️ Easy cold-start operation\n" +
+           "🔥 Stability at high temperatures\n" +
+           "⚙️ Protection against LSPI (Low Energy Premature Burnout in Turbocharged Engines)"
+            ],
+        category:"gasoline"
+
+
+    },
+    {
+        id: 12,
+        title:"Extra B-One 0W-16",
+        // des:"Malaysian Extra B1 0W-16 oil is specifically designed for modern Japanese and Korean engines that are based on fuel economy technology and require very low viscosity oil. Below is an explanation of its specifications and the meaning of its SQ rating.",
+        img:"products/ow-16.jpg",
+        mwas:["Why is it used in hybrid cars?\n" +
+        "\n" +
+        "Hybrid cars require high efficiency, so they use lighter oils like 0W-16 because of:\n" +
+        "\n" +
+        "✅ Reduced fuel consumption\n" +
+        "✅ Improved engine efficiency\n" +
+        "✅ Reduced friction inside the engine\n" +
+        "✅ Smoother operation, especially since hybrid engines frequently start and stop."],
+        aplication:[
+            "This oil is only for engines designed for it (usually modern cars, especially Japanese ones like Toyota).\n" +
+            "\n" +
+            "If you use it in a car not designed for it:\n" +
+            "\n" +
+            "It may cause faster engine wear\n" +
+            "Because the oil is very thin and may not adequately protect the parts.\n" +
+            "When should I use it?\n" +
+            "\n" +
+            "Use 0W-16 only if:\n" +
+            "It's mentioned in the car's manual\n" +
+            "Or the manufacturer recommends it\n" +
+            "In summary,\n" +
+            "0W-16 is:\n" +
+            "A very thin oil\n" +
+            "Suitable for modern and hybrid cars\n" +
+            "Its purpose is to reduce fuel consumption and increase efficiency"
+        ],
+
+        // typical:[
+        //     "Features of 5W-30 API SQ Oil\n" +
+        //     "Oils with this rating are characterized by:\n" +
+        //     "\n" +
+        //     "🛡️ High engine protection against wear\n" +
+        //     "🧼 Engine cleaning from deposits\n" +
+        //     "⛽️ Reduced fuel consumption\n" +
+        //     "❄️ Easy cold-start operation\n" +
+        //     "🔥 Stability at high temperatures\n" +
+        //     "⚙️ Protection against LSPI (Low Energy Premature Burnout in Turbocharged Engines)"
+        // ],
+        category:"gasoline"
+
+
+    },
+    {
+        id: 13,
+        title:"Extra B-One 10W-30",
+        // des:"Malaysian Extra B1 0W-16 oil is specifically designed for modern Japanese and Korean engines that are based on fuel economy technology and require very low viscosity oil. Below is an explanation of its specifications and the meaning of its SQ rating.",
+        img:"products/10w-30.jpg",
+        mwas:["Features of 10W-30 Oil\n" +
+        "\n" +
+        "Suitable for moderate temperatures (neither extremely cold nor extremely hot)\n" +
+        "\n" +
+        "Helps start the engine easily in the morning\n" +
+        "Provides good lubrication and protects engine parts from friction\n" +
+        "Reduces fuel consumption compared to heavier oils\n" +
+        "\n" +
+        "When to Use It?\n" +
+        "\n" +
+        "Suitable for most relatively old or normally used cars\n" +
+        "Recommended in areas with moderate climates\n" +
+        "Use in some gasoline engines (according to the manufacturer's recommendations)"],
+
+        category:"gasoline"
+
+
+    },
+
 
 
 

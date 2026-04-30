@@ -41,7 +41,8 @@ const Header = () => {
     return (
         <div
             id="Header"
-            className="relative w-full flex flex-col items-center justify-center overflow-hidden md:py-17 py-15 bg-gray-50   "
+            className="relative w-full flex flex-col items-center
+            justify-center overflow-hidden md:py-17 py-15 bg-gray-50   "
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
         >
